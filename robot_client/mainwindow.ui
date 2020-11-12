@@ -35,6 +35,9 @@
        <height>23</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(170, 85, 127);</string>
+     </property>
      <property name="text">
       <string>Connect</string>
      </property>
@@ -48,6 +51,9 @@
        <height>20</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(211, 212, 255);</string>
+     </property>
     </widget>
     <widget class="QLineEdit" name="Telnet_Port">
      <property name="geometry">
@@ -57,6 +63,9 @@
        <width>113</width>
        <height>20</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(211, 212, 255);</string>
      </property>
     </widget>
     <widget class="QLabel" name="label">
@@ -185,6 +194,9 @@
        <height>22</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(211, 212, 255);</string>
+     </property>
      <property name="currentText">
       <string>115200</string>
      </property>
@@ -228,6 +240,9 @@
        <height>22</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(211, 212, 255);</string>
+     </property>
      <property name="currentText">
       <string>8</string>
      </property>
@@ -250,6 +265,9 @@
        <width>81</width>
        <height>22</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(211, 212, 255);</string>
      </property>
      <item>
       <property name="text">
@@ -286,6 +304,9 @@
        <height>22</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(211, 212, 255);</string>
+     </property>
      <item>
       <property name="text">
        <string>OneStop</string>
@@ -311,6 +332,9 @@
        <height>22</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(211, 212, 255);</string>
+     </property>
      <item>
       <property name="text">
        <string>NoFlowControl</string>
@@ -325,6 +349,9 @@
        <width>81</width>
        <height>22</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(211, 212, 255);</string>
      </property>
      <property name="currentText">
       <string>None</string>
@@ -348,6 +375,9 @@
        <width>71</width>
        <height>23</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(170, 85, 127);</string>
      </property>
      <property name="text">
       <string>Connect</string>
@@ -375,6 +405,9 @@
        <height>23</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(170, 0, 127);</string>
+     </property>
      <property name="text">
       <string>Device List</string>
      </property>
@@ -387,6 +420,9 @@
        <width>71</width>
        <height>23</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(170, 0, 127);</string>
      </property>
      <property name="text">
       <string>PushButton</string>
@@ -401,6 +437,9 @@
        <height>23</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(170, 0, 127);</string>
+     </property>
      <property name="text">
       <string>STOP Motor</string>
      </property>
@@ -413,6 +452,9 @@
        <width>71</width>
        <height>23</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(170, 0, 127);</string>
      </property>
      <property name="text">
       <string>RESET</string>
@@ -427,6 +469,9 @@
        <height>23</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(170, 0, 127);</string>
+     </property>
      <property name="text">
       <string>PushButton</string>
      </property>
@@ -440,6 +485,9 @@
        <height>23</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(170, 0, 127);</string>
+     </property>
      <property name="text">
       <string>PushButton</string>
      </property>
@@ -452,6 +500,9 @@
        <width>75</width>
        <height>23</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(170, 85, 127);</string>
      </property>
      <property name="text">
       <string>Quitter</string>
@@ -748,6 +799,10 @@
         <width>831</width>
         <height>621</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(27, 27, 27);
+color: rgb(255, 0, 0);</string>
       </property>
      </widget>
     </widget>
