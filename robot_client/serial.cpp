@@ -129,6 +129,6 @@ void MainWindow::closeSerialPort()
 
 void MainWindow::initSerialPort(){
 
-    //    QMessageBox::information(this,"debug",QString("%1").arg(ui->Serial_Data_Bits->currentText()));
+       //QMessageBox::information(this,"debug",QString("%1").arg(ui->Serial_Data_Bits->currentText()));
 
 }

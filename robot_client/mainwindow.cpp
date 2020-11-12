@@ -26,7 +26,6 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     serialInit();
-
 }
 
 
@@ -46,13 +45,10 @@ void MainWindow::on_buttonQuitter_clicked()
     QMessageBox::information(this, "A Propos", "fofo");
 }
 
-
 void MainWindow::on_actionQuitter_changed()
 {
     QMessageBox::information(this, "A Propos", "toto");
 }
-
-
 
 void MainWindow::on_actionQuitter_toggled(bool arg1)
 {
@@ -64,3 +60,8 @@ void MainWindow::on_actionQuitter_triggered()
     QApplication::quit();
 }
 
+
+void MainWindow::on_pushButton_Command_Terminal_1_clicked()
+{
+    QMessageBox::information(this, "A Propos", "momo");
+}

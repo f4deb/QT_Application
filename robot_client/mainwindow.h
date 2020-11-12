@@ -51,5 +51,6 @@ private slots:
     void on_Serial_Baudrate_currentTextChanged(const QString &arg1);
     void on_Serial_Port_activated(const QString &arg1);
     void on_Serial_Port_currentIndexChanged(const QString &arg1);
+    void on_pushButton_Command_Terminal_1_clicked();
 };
 #endif // MAINWINDOW_H
