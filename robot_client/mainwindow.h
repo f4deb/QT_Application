@@ -20,7 +20,7 @@ public:
     ~MainWindow();
 
     Terminal *terminal;
-
+    int etat_serial_port;
 
     QSerialPort *serial;
     void openSerialPort();

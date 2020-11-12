@@ -223,6 +223,7 @@ Makefile: ../robot_client/robot_client.pro H:/QT5/5.15.0/mingw81_64/mkspecs/win3
 		H:/QT5/5.15.0/mingw81_64/mkspecs/features/qt_config.prf \
 		H:/QT5/5.15.0/mingw81_64/mkspecs/win32-g++/qmake.conf \
 		H:/QT5/5.15.0/mingw81_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		H:/QT5/5.15.0/mingw81_64/mkspecs/features/exclusive_builds.prf \
 		H:/QT5/5.15.0/mingw81_64/mkspecs/features/toolchain.prf \
 		H:/QT5/5.15.0/mingw81_64/mkspecs/features/default_pre.prf \
@@ -254,7 +255,6 @@ Makefile: ../robot_client/robot_client.pro H:/QT5/5.15.0/mingw81_64/mkspecs/win3
 		H:/QT5/5.15.0/mingw81_64/lib/Qt5SerialPort.prl \
 		H:/QT5/5.15.0/mingw81_64/lib/Qt5Core.prl \
 		H:/QT5/5.15.0/mingw81_64/lib/qtmain.prl \
-		.qmake.stash \
 		H:/QT5/5.15.0/mingw81_64/mkspecs/features/build_pass.prf
 	$(QMAKE) -o Makefile ..\robot_client\robot_client.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 H:/QT5/5.15.0/mingw81_64/mkspecs/features/spec_pre.prf:
@@ -410,6 +410,7 @@ H:/QT5/5.15.0/mingw81_64/mkspecs/features/qt_functions.prf:
 H:/QT5/5.15.0/mingw81_64/mkspecs/features/qt_config.prf:
 H:/QT5/5.15.0/mingw81_64/mkspecs/win32-g++/qmake.conf:
 H:/QT5/5.15.0/mingw81_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 H:/QT5/5.15.0/mingw81_64/mkspecs/features/exclusive_builds.prf:
 H:/QT5/5.15.0/mingw81_64/mkspecs/features/toolchain.prf:
 H:/QT5/5.15.0/mingw81_64/mkspecs/features/default_pre.prf:
@@ -441,7 +442,6 @@ H:/QT5/5.15.0/mingw81_64/lib/Qt5Network.prl:
 H:/QT5/5.15.0/mingw81_64/lib/Qt5SerialPort.prl:
 H:/QT5/5.15.0/mingw81_64/lib/Qt5Core.prl:
 H:/QT5/5.15.0/mingw81_64/lib/qtmain.prl:
-.qmake.stash:
 H:/QT5/5.15.0/mingw81_64/mkspecs/features/build_pass.prf:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ..\robot_client\robot_client.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"

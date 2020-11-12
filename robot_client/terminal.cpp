@@ -7,13 +7,13 @@
 QString serialCommandSend;
 QString serialCommandReceived;
 
+int etat_serial_port;
 
-extern int etat_serial_port;
 Terminal *t_instances = 0;
 
 Terminal::Terminal(QWidget *parent)
     : QPlainTextEdit(parent)
-    , localEchoEnabled(false)
+    , localEchoEnabled(false)//QPlainTextEdit
 {
     document()->setMaximumBlockCount(100);
     p = palette();
@@ -31,7 +31,7 @@ void Terminal::putData(const QByteArray &data,int dir)
             setPalette(p);
             appendPlainText(QString(data));//appendPlainText
             // memorise la commande
-            serialCommandSend = "a"+data.left(2) ;
+            serialCommandSend = "z"+data.left(2) ;
             //serialCommandReceived = data;
             break;
         case 1 :
@@ -62,11 +62,25 @@ void Terminal::keyPressEvent(QKeyEvent *e)
     default:
         if (localEchoEnabled)
             QPlainTextEdit::keyPressEvent(e);
-       // emit getData(e->text().toLocal8Bit());//QPlainTextEdit
+        emit getData(e->text().toLocal8Bit());//QPlainTextEdit
     }
 }
 
+void Terminal::mousePressEvent(QMouseEvent *e)
+{
+    Q_UNUSED(e)
+    setFocus();
+}
 
+void Terminal::mouseDoubleClickEvent(QMouseEvent *e)
+{
+    Q_UNUSED(e)
+}
+
+void Terminal::contextMenuEvent(QContextMenuEvent *e)
+{
+    Q_UNUSED(e)
+}
 
 void Terminal::terminalInitialisation(){
 
@@ -88,9 +102,14 @@ void Terminal::setEtatConnexionSerial(int etat){
 
 void Terminal::on_bouton_serial_connexion_clicked(){
     switch (etat_serial_port){
-        //case 0 : emit openSerialPortTerminal();break;
-        //case 1 : emit closeSerialPortTerminal();break;
-        //case -1 : emit openSerialPortTerminal();break;
+        case 0 : emit openSerialPortTerminal();break;
+        case 1 : emit closeSerialPortTerminal();break;
+        case -1 : emit openSerialPortTerminal();break;
         default : break;
     }
+}
+
+Terminal::Settings Terminal::settings() const
+{
+    return currentSettings;
 }

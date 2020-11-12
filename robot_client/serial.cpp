@@ -7,7 +7,7 @@
 
 static const char blankString[] = QT_TRANSLATE_NOOP("SettingsDialog", "N/A");
 
-int etat_serial_port;
+//int etat_serial_port;
 
 
 void MainWindow::on_Serial_Connect_clicked()
