@@ -69,8 +69,6 @@ void MainWindow::fillPortsInfo()
     }
 }
 
-
-
 void MainWindow::openSerialPort(){
 
     int defineParity=0;
@@ -101,20 +99,17 @@ void MainWindow::openSerialPort(){
     serial->setStopBits(static_cast<QSerialPort::StopBits>(defineStopBit));
     serial->setFlowControl(static_cast<QSerialPort::FlowControl>(1)); //pas de controle de flux
 
-
-
-
-
-
     if (serial->open(QIODevice::ReadWrite)) {
+        char car[10]="ouvert";
+        serial->write(car);
         ui->Serial_Connect->setText("Disconnect");
-        statusBar()->showMessage(tr("Serial Port Connected"));
+        //statusBar()->showMessage(tr("Serial Port Connected"));
         QObject::connect(serial, SIGNAL(readyRead()), this, SLOT(readData()));
         etat_serial_port = 1;
     } else {
         ui->Serial_Connect->setText("Connect");
         QObject::disconnect(serial, SIGNAL(readyRead()), this, SLOT(readData()));
-        statusBar()->showMessage(tr("Serial Port error"));
+        //statusBar()->showMessage(tr("Serial Port error"));
         etat_serial_port = -1;
     }
 }
@@ -123,12 +118,20 @@ void MainWindow::closeSerialPort()
 {
     if (serial->isOpen())
         serial->close();
-
-
 }
 
 void MainWindow::initSerialPort(){
 
        //QMessageBox::information(this,"debug",QString("%1").arg(ui->Serial_Data_Bits->currentText()));
+}
 
+void MainWindow::serialWrite(const QByteArray &data){
+    const QByteArray datas="455";
+    serial->write(datas);
+}
+
+void MainWindow::readData(){
+    while (serial->waitForReadyRead(10));
+    QByteArray datass = serial->readAll();
+    //envoyerATous(datass);
 }

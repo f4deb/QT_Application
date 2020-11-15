@@ -4,7 +4,7 @@
 #include <QMainWindow>
 #include <QtSerialPort/QSerialPortInfo>
 
-#include "terminal.h"
+#include "console.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -19,7 +19,6 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-    Terminal *terminal;
     int etat_serial_port;
 
     QSerialPort *serial;
@@ -35,7 +34,8 @@ private:
     void fillPortsParameters();
     void fillPortsInfo();
 
-
+    void serialWrite(const QByteArray &data);
+    Console *m_console = nullptr;
 
 public slots:
 
@@ -52,5 +52,11 @@ private slots:
     void on_Serial_Port_activated(const QString &arg1);
     void on_Serial_Port_currentIndexChanged(const QString &arg1);
     void on_pushButton_Command_Terminal_1_clicked();
+
+
+    void readData();
+
+    void on_pushButton_Command_Terminal_2_clicked();
+    void on_plainTextEdit_textChanged();
 };
 #endif // MAINWINDOW_H
