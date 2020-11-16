@@ -266,39 +266,22 @@ public:
         label_8->setObjectName(QString::fromUtf8("label_8"));
         label_8->setGeometry(QRect(10, 170, 47, 13));
         Serial_Baudrate = new QComboBox(groupBox_2);
-        Serial_Baudrate->addItem(QString());
-        Serial_Baudrate->addItem(QString());
-        Serial_Baudrate->addItem(QString());
-        Serial_Baudrate->addItem(QString());
-        Serial_Baudrate->addItem(QString());
-        Serial_Baudrate->addItem(QString());
         Serial_Baudrate->setObjectName(QString::fromUtf8("Serial_Baudrate"));
         Serial_Baudrate->setGeometry(QRect(90, 50, 81, 22));
         Serial_Baudrate->setStyleSheet(QString::fromUtf8("background-color: rgb(211, 212, 255);"));
         Serial_Data_Bits = new QComboBox(groupBox_2);
-        Serial_Data_Bits->addItem(QString());
-        Serial_Data_Bits->addItem(QString());
         Serial_Data_Bits->setObjectName(QString::fromUtf8("Serial_Data_Bits"));
         Serial_Data_Bits->setGeometry(QRect(90, 80, 81, 22));
         Serial_Data_Bits->setStyleSheet(QString::fromUtf8("background-color: rgb(211, 212, 255);"));
         Serial_Parity = new QComboBox(groupBox_2);
-        Serial_Parity->addItem(QString());
-        Serial_Parity->addItem(QString());
-        Serial_Parity->addItem(QString());
-        Serial_Parity->addItem(QString());
-        Serial_Parity->addItem(QString());
         Serial_Parity->setObjectName(QString::fromUtf8("Serial_Parity"));
         Serial_Parity->setGeometry(QRect(90, 110, 81, 22));
         Serial_Parity->setStyleSheet(QString::fromUtf8("background-color: rgb(211, 212, 255);"));
         Serial_Stop_Bits = new QComboBox(groupBox_2);
-        Serial_Stop_Bits->addItem(QString());
-        Serial_Stop_Bits->addItem(QString());
-        Serial_Stop_Bits->addItem(QString());
         Serial_Stop_Bits->setObjectName(QString::fromUtf8("Serial_Stop_Bits"));
         Serial_Stop_Bits->setGeometry(QRect(90, 140, 81, 22));
         Serial_Stop_Bits->setStyleSheet(QString::fromUtf8("background-color: rgb(211, 212, 255);"));
         Serial_Flow_Control = new QComboBox(groupBox_2);
-        Serial_Flow_Control->addItem(QString());
         Serial_Flow_Control->setObjectName(QString::fromUtf8("Serial_Flow_Control"));
         Serial_Flow_Control->setGeometry(QRect(90, 170, 81, 22));
         Serial_Flow_Control->setStyleSheet(QString::fromUtf8("background-color: rgb(211, 212, 255);"));
@@ -915,30 +898,8 @@ public:
         label_6->setText(QCoreApplication::translate("MainWindow", "Parity", nullptr));
         label_7->setText(QCoreApplication::translate("MainWindow", "Stop bits", nullptr));
         label_8->setText(QCoreApplication::translate("MainWindow", "Flow Control", nullptr));
-        Serial_Baudrate->setItemText(0, QCoreApplication::translate("MainWindow", "115200", nullptr));
-        Serial_Baudrate->setItemText(1, QCoreApplication::translate("MainWindow", "9600", nullptr));
-        Serial_Baudrate->setItemText(2, QCoreApplication::translate("MainWindow", "19200", nullptr));
-        Serial_Baudrate->setItemText(3, QCoreApplication::translate("MainWindow", "38400", nullptr));
-        Serial_Baudrate->setItemText(4, QCoreApplication::translate("MainWindow", "57600", nullptr));
-        Serial_Baudrate->setItemText(5, QCoreApplication::translate("MainWindow", "250000", nullptr));
-
-        Serial_Baudrate->setCurrentText(QCoreApplication::translate("MainWindow", "115200", nullptr));
-        Serial_Data_Bits->setItemText(0, QCoreApplication::translate("MainWindow", "8", nullptr));
-        Serial_Data_Bits->setItemText(1, QCoreApplication::translate("MainWindow", "7", nullptr));
-
-        Serial_Data_Bits->setCurrentText(QCoreApplication::translate("MainWindow", "8", nullptr));
-        Serial_Parity->setItemText(0, QCoreApplication::translate("MainWindow", "NoParity", nullptr));
-        Serial_Parity->setItemText(1, QCoreApplication::translate("MainWindow", "EvenParity", nullptr));
-        Serial_Parity->setItemText(2, QCoreApplication::translate("MainWindow", "OddParity", nullptr));
-        Serial_Parity->setItemText(3, QCoreApplication::translate("MainWindow", "SpaceParity", nullptr));
-        Serial_Parity->setItemText(4, QCoreApplication::translate("MainWindow", "MarkParity", nullptr));
-
-        Serial_Stop_Bits->setItemText(0, QCoreApplication::translate("MainWindow", "OneStop", nullptr));
-        Serial_Stop_Bits->setItemText(1, QCoreApplication::translate("MainWindow", "OneAndHalfStop", nullptr));
-        Serial_Stop_Bits->setItemText(2, QCoreApplication::translate("MainWindow", "TwoStop", nullptr));
-
-        Serial_Flow_Control->setItemText(0, QCoreApplication::translate("MainWindow", "NoFlowControl", nullptr));
-
+        Serial_Baudrate->setCurrentText(QString());
+        Serial_Data_Bits->setCurrentText(QString());
         Serial_Port->setItemText(0, QCoreApplication::translate("MainWindow", "None", nullptr));
         Serial_Port->setItemText(1, QCoreApplication::translate("MainWindow", "testport", nullptr));
 

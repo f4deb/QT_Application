@@ -26,9 +26,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     m_console->setEnabled(false);
-    //setCentralWidget(m_console);
 
-    //m_console->putData(data,0)
     serialInit();
 }
 
@@ -76,11 +74,10 @@ void MainWindow::on_pushButton_Command_Terminal_1_clicked()
 
 void MainWindow::on_pushButton_Command_Terminal_2_clicked()
 {
-    const QByteArray text;
-    serialWrite(text);
-
-    QByteArray datas = "BORDEL";
+    QByteArray datas =  ui->Command_Terminal_2->text().toUtf8();
     serial->write(datas);
+
+    ui->plainTextEdit->insertPlainText(ui->Command_Terminal_2->text());
 
 }
 

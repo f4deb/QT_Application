@@ -41,7 +41,33 @@ void MainWindow::serialInit()
 
 void MainWindow::fillPortsParameters()
 {
+    ui->Serial_Baudrate->addItem(QStringLiteral("9600"), QSerialPort::Baud9600);
+    ui->Serial_Baudrate->addItem(QStringLiteral("19200"), QSerialPort::Baud19200);
+    ui->Serial_Baudrate->addItem(QStringLiteral("38400"), QSerialPort::Baud38400);
+    ui->Serial_Baudrate->addItem(QStringLiteral("115200"), QSerialPort::Baud115200);
+    ui->Serial_Baudrate->setCurrentIndex(3);
 
+    ui->Serial_Data_Bits->addItem(QStringLiteral("5"), QSerialPort::Data5);
+    ui->Serial_Data_Bits->addItem(QStringLiteral("6"), QSerialPort::Data6);
+    ui->Serial_Data_Bits->addItem(QStringLiteral("7"), QSerialPort::Data7);
+    ui->Serial_Data_Bits->addItem(QStringLiteral("8"), QSerialPort::Data8);
+    ui->Serial_Data_Bits->setCurrentIndex(3);
+
+    ui->Serial_Parity->addItem(tr("None"), QSerialPort::NoParity);
+    ui->Serial_Parity->addItem(tr("Even"), QSerialPort::EvenParity);
+    ui->Serial_Parity->addItem(tr("Odd"), QSerialPort::OddParity);
+    ui->Serial_Parity->addItem(tr("Mark"), QSerialPort::MarkParity);
+    ui->Serial_Parity->addItem(tr("Space"), QSerialPort::SpaceParity);
+
+    ui->Serial_Stop_Bits->addItem(QStringLiteral("1"), QSerialPort::OneStop);
+#ifdef Q_OS_WIN
+    ui->Serial_Stop_Bits->addItem(tr("1.5"), QSerialPort::OneAndHalfStop);
+#endif
+    ui->Serial_Stop_Bits->addItem(QStringLiteral("2"), QSerialPort::TwoStop);
+
+    ui->Serial_Flow_Control->addItem(tr("None"), QSerialPort::NoFlowControl);
+    ui->Serial_Flow_Control->addItem(tr("RTS/CTS"), QSerialPort::HardwareControl);
+    ui->Serial_Flow_Control->addItem(tr("XON/XOFF"), QSerialPort::SoftwareControl);
 }
 
 void MainWindow::fillPortsInfo()
@@ -71,20 +97,6 @@ void MainWindow::fillPortsInfo()
 
 void MainWindow::openSerialPort(){
 
-    int defineParity=0;
-    if (ui->Serial_Parity->currentText() == "NoParity") defineParity=0;
-    else if (ui->Serial_Parity->currentText() == "EvenParity") defineParity=2;
-    else if (ui->Serial_Parity->currentText() == "OddParity") defineParity=3;
-    else if (ui->Serial_Parity->currentText() == "SpaceParity") defineParity=4;
-    else if (ui->Serial_Parity->currentText() == "MarkParity") defineParity=5;
-    else defineParity=-1;
-
-    int defineStopBit=0;
-    if (ui->Serial_Stop_Bits->currentText() == "OneStop") defineStopBit=1;
-    else if (ui->Serial_Stop_Bits->currentText() == "OneAndHalfStop") defineStopBit=3;
-    else if (ui->Serial_Stop_Bits->currentText() == "TwoStop") defineStopBit=2;
-    else defineStopBit=-1;
-
     if (etat_serial_port == 1) {
         serial->close();
         etat_serial_port = 0;
@@ -92,16 +104,16 @@ void MainWindow::openSerialPort(){
         statusBar()->showMessage(tr("Serial Port Disconnected"));
         return;
     }
+
     serial->setPortName(ui->Serial_Port->currentText());
-    serial->setBaudRate(ui->Serial_Baudrate->currentText().toInt());
-    serial->setDataBits(static_cast<QSerialPort::DataBits>(ui->Serial_Data_Bits->currentText().toUInt()));
-    serial->setParity(static_cast<QSerialPort::Parity>(defineParity));
-    serial->setStopBits(static_cast<QSerialPort::StopBits>(defineStopBit));
-    serial->setFlowControl(static_cast<QSerialPort::FlowControl>(1)); //pas de controle de flux
+    //serial->setPortName(serialPortInfoListBox->currentText());
+    serial->setBaudRate(static_cast<QSerialPort::BaudRate>(ui->Serial_Baudrate->itemData(ui->Serial_Baudrate->currentIndex()).toInt()));
+    serial->setDataBits(static_cast<QSerialPort::DataBits>(ui->Serial_Data_Bits->itemData(ui->Serial_Data_Bits->currentIndex()).toInt()));
+    serial->setParity(static_cast<QSerialPort::Parity>(ui->Serial_Parity->itemData(ui->Serial_Parity->currentIndex()).toInt()));
+    serial->setStopBits(static_cast<QSerialPort::StopBits>(ui->Serial_Stop_Bits->itemData(ui->Serial_Stop_Bits->currentIndex()).toInt()));
+    serial->setFlowControl(static_cast<QSerialPort::FlowControl>(ui->Serial_Flow_Control->itemData(ui->Serial_Flow_Control->currentIndex()).toInt()));
 
     if (serial->open(QIODevice::ReadWrite)) {
-        char car[10]="ouvert";
-        serial->write(car);
         ui->Serial_Connect->setText("Disconnect");
         //statusBar()->showMessage(tr("Serial Port Connected"));
         QObject::connect(serial, SIGNAL(readyRead()), this, SLOT(readData()));
