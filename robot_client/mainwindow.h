@@ -58,5 +58,14 @@ private slots:
 
     void on_pushButton_Command_Terminal_2_clicked();
     void on_plainTextEdit_textChanged();
+    void on_pushButton_Command_Terminal_3_clicked();
+    void on_pushButton_Command_Terminal_4_clicked();
+    void on_pushButton_Command_Terminal_5_clicked();
+    void on_pushButton_Command_Terminal_6_clicked();
+    void on_pushButton_Command_Terminal_7_clicked();
+    void on_pushButton_Command_Terminal_8_clicked();
+    void on_pushButton_Command_Terminal_9_clicked();
+    void on_pushButton_Command_Terminal_10_clicked();
+    void on_pushButton_Command_Terminal_11_clicked();
 };
 #endif // MAINWINDOW_H

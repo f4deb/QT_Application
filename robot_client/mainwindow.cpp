@@ -69,6 +69,7 @@ void MainWindow::on_pushButton_Command_Terminal_1_clicked()
     QByteArray datas =  ui->Command_Terminal_1->text().toUtf8();
     serial->write(datas);
 
+    ui->plainTextEdit->setStyleSheet("background-color: rgb(0, 0, 0);color: rgb(255, 0, 0);");
     ui->plainTextEdit->insertPlainText(ui->Command_Terminal_1->text());
 }
 
@@ -77,11 +78,92 @@ void MainWindow::on_pushButton_Command_Terminal_2_clicked()
     QByteArray datas =  ui->Command_Terminal_2->text().toUtf8();
     serial->write(datas);
 
+    ui->plainTextEdit->setStyleSheet("background-color: rgb(0, 0, 0);color: rgb(255, 0, 0);");
     ui->plainTextEdit->insertPlainText(ui->Command_Terminal_2->text());
-
 }
 
 void MainWindow::on_plainTextEdit_textChanged()
 {
 
+}
+
+void MainWindow::on_pushButton_Command_Terminal_3_clicked()
+{
+    QByteArray datas =  ui->Command_Terminal_3->text().toUtf8();
+    serial->write(datas);
+
+    ui->plainTextEdit->setStyleSheet("background-color: rgb(0, 0, 0);color: rgb(255, 0, 0);");
+    ui->plainTextEdit->insertPlainText(ui->Command_Terminal_3->text());
+}
+
+void MainWindow::on_pushButton_Command_Terminal_4_clicked()
+{
+    QByteArray datas =  ui->Command_Terminal_4->text().toUtf8();
+    serial->write(datas);
+
+    ui->plainTextEdit->setStyleSheet("background-color: rgb(0, 0, 0);color: rgb(255, 0, 0);");
+    ui->plainTextEdit->insertPlainText(ui->Command_Terminal_4->text());
+}
+
+void MainWindow::on_pushButton_Command_Terminal_5_clicked()
+{
+    QByteArray datas =  ui->Command_Terminal_5->text().toUtf8();
+    serial->write(datas);
+
+    ui->plainTextEdit->setStyleSheet("background-color: rgb(0, 0, 0);color: rgb(255, 0, 0);");
+    ui->plainTextEdit->insertPlainText(ui->Command_Terminal_5->text());
+}
+
+void MainWindow::on_pushButton_Command_Terminal_6_clicked()
+{
+    QByteArray datas =  ui->Command_Terminal_6->text().toUtf8();
+    serial->write(datas);
+
+    ui->plainTextEdit->setStyleSheet("background-color: rgb(0, 0, 0);color: rgb(255, 0, 0);");
+    ui->plainTextEdit->insertPlainText(ui->Command_Terminal_6->text());
+}
+
+void MainWindow::on_pushButton_Command_Terminal_7_clicked()
+{
+    QByteArray datas =  ui->Command_Terminal_7->text().toUtf8();
+    serial->write(datas);
+
+    ui->plainTextEdit->setStyleSheet("background-color: rgb(0, 0, 0);color: rgb(255, 0, 0);");
+    ui->plainTextEdit->insertPlainText(ui->Command_Terminal_7->text());
+}
+
+void MainWindow::on_pushButton_Command_Terminal_8_clicked()
+{
+    QByteArray datas =  ui->Command_Terminal_8->text().toUtf8();
+    serial->write(datas);
+
+    ui->plainTextEdit->setStyleSheet("background-color: rgb(0, 0, 0);color: rgb(255, 0, 0);");
+    ui->plainTextEdit->insertPlainText(ui->Command_Terminal_8->text());
+}
+
+void MainWindow::on_pushButton_Command_Terminal_9_clicked()
+{
+    QByteArray datas =  ui->Command_Terminal_9->text().toUtf8();
+    serial->write(datas);
+
+    ui->plainTextEdit->setStyleSheet("background-color: rgb(0, 0, 0);color: rgb(255, 0, 0);");
+    ui->plainTextEdit->insertPlainText(ui->Command_Terminal_9->text());
+}
+
+void MainWindow::on_pushButton_Command_Terminal_10_clicked()
+{
+    QByteArray datas =  ui->Command_Terminal_10->text().toUtf8();
+    serial->write(datas);
+
+    ui->plainTextEdit->setStyleSheet("background-color: rgb(0, 0, 0);color: rgb(255, 0, 0);");
+    ui->plainTextEdit->insertPlainText(ui->Command_Terminal_10->text());
+}
+
+void MainWindow::on_pushButton_Command_Terminal_11_clicked()
+{
+    QByteArray datas =  ui->Command_Terminal_11->text().toUtf8();
+    serial->write(datas);
+
+    ui->plainTextEdit->setStyleSheet("background-color: rgb(0, 0, 0);color: rgb(255, 0, 0);");
+    ui->plainTextEdit->insertPlainText(ui->Command_Terminal_11->text());
 }

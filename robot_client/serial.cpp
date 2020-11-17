@@ -115,13 +115,13 @@ void MainWindow::openSerialPort(){
 
     if (serial->open(QIODevice::ReadWrite)) {
         ui->Serial_Connect->setText("Disconnect");
-        //statusBar()->showMessage(tr("Serial Port Connected"));
+        statusBar()->showMessage(tr("Serial Port Connected"));
         QObject::connect(serial, SIGNAL(readyRead()), this, SLOT(readData()));
         etat_serial_port = 1;
     } else {
         ui->Serial_Connect->setText("Connect");
         QObject::disconnect(serial, SIGNAL(readyRead()), this, SLOT(readData()));
-        //statusBar()->showMessage(tr("Serial Port error"));
+        statusBar()->showMessage(tr("Serial Port error"));
         etat_serial_port = -1;
     }
 }

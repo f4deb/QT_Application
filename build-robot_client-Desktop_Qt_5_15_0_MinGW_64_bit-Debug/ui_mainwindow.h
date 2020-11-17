@@ -229,7 +229,7 @@ public:
         Telnet_Connect->setGeometry(QRect(50, 80, 111, 23));
         Telnet_Connect->setStyleSheet(QString::fromUtf8("color: rgb(170, 85, 127);\n"
 "border:none;\n"
-"background-color: rgb(233, 255, 233);"));
+"background-color: rgb(187, 255, 206);"));
         Telnet_IP = new QLineEdit(groupBox);
         Telnet_IP->setObjectName(QString::fromUtf8("Telnet_IP"));
         Telnet_IP->setGeometry(QRect(50, 20, 113, 20));
@@ -298,7 +298,7 @@ public:
         QBrush brush(QColor(170, 85, 127, 255));
         brush.setStyle(Qt::SolidPattern);
         palette.setBrush(QPalette::Active, QPalette::WindowText, brush);
-        QBrush brush1(QColor(233, 255, 233, 255));
+        QBrush brush1(QColor(187, 255, 206, 255));
         brush1.setStyle(Qt::SolidPattern);
         palette.setBrush(QPalette::Active, QPalette::Button, brush1);
         palette.setBrush(QPalette::Active, QPalette::Text, brush);
@@ -335,7 +335,7 @@ public:
         Serial_Connect->setPalette(palette);
         Serial_Connect->setStyleSheet(QString::fromUtf8("color: rgb(170, 85, 127);\n"
 "border:none;\n"
-"background-color: rgb(233, 255, 233);\n"
+"background-color: rgb(187, 255, 206);\n"
 ""));
         groupBox_3 = new QGroupBox(centralwidget);
         groupBox_3->setObjectName(QString::fromUtf8("groupBox_3"));
@@ -380,7 +380,7 @@ public:
         groupBox_4 = new QGroupBox(tab);
         groupBox_4->setObjectName(QString::fromUtf8("groupBox_4"));
         groupBox_4->setGeometry(QRect(0, -20, 231, 621));
-        groupBox_4->setStyleSheet(QString::fromUtf8("background-color: rgb(233, 255, 233);"));
+        groupBox_4->setStyleSheet(QString::fromUtf8(""));
         pushButton_Command_Terminal_1 = new QPushButton(groupBox_4);
         pushButton_Command_Terminal_1->setObjectName(QString::fromUtf8("pushButton_Command_Terminal_1"));
         pushButton_Command_Terminal_1->setGeometry(QRect(170, 30, 51, 23));
@@ -431,9 +431,11 @@ public:
         pushButton_Command_Terminal_2 = new QPushButton(groupBox_4);
         pushButton_Command_Terminal_2->setObjectName(QString::fromUtf8("pushButton_Command_Terminal_2"));
         pushButton_Command_Terminal_2->setGeometry(QRect(170, 60, 51, 23));
+        pushButton_Command_Terminal_2->setStyleSheet(QString::fromUtf8(""));
         pushButton_Command_Terminal_3 = new QPushButton(groupBox_4);
         pushButton_Command_Terminal_3->setObjectName(QString::fromUtf8("pushButton_Command_Terminal_3"));
         pushButton_Command_Terminal_3->setGeometry(QRect(170, 90, 51, 23));
+        pushButton_Command_Terminal_3->setStyleSheet(QString::fromUtf8(""));
         pushButton_Command_Terminal_4 = new QPushButton(groupBox_4);
         pushButton_Command_Terminal_4->setObjectName(QString::fromUtf8("pushButton_Command_Terminal_4"));
         pushButton_Command_Terminal_4->setGeometry(QRect(170, 120, 51, 23));

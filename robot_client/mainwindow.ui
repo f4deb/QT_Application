@@ -38,7 +38,7 @@
      <property name="styleSheet">
       <string notr="true">color: rgb(170, 85, 127);
 border:none;
-background-color: rgb(233, 255, 233);</string>
+background-color: rgb(187, 255, 206);</string>
      </property>
      <property name="text">
       <string>Connect</string>
@@ -308,9 +308,9 @@ background-color: rgb(233, 255, 233);</string>
         <colorrole role="Button">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>233</red>
+           <red>187</red>
            <green>255</green>
-           <blue>233</blue>
+           <blue>206</blue>
           </color>
          </brush>
         </colorrole>
@@ -335,18 +335,18 @@ background-color: rgb(233, 255, 233);</string>
         <colorrole role="Base">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>233</red>
+           <red>187</red>
            <green>255</green>
-           <blue>233</blue>
+           <blue>206</blue>
           </color>
          </brush>
         </colorrole>
         <colorrole role="Window">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>233</red>
+           <red>187</red>
            <green>255</green>
-           <blue>233</blue>
+           <blue>206</blue>
           </color>
          </brush>
         </colorrole>
@@ -373,9 +373,9 @@ background-color: rgb(233, 255, 233);</string>
         <colorrole role="Button">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>233</red>
+           <red>187</red>
            <green>255</green>
-           <blue>233</blue>
+           <blue>206</blue>
           </color>
          </brush>
         </colorrole>
@@ -400,18 +400,18 @@ background-color: rgb(233, 255, 233);</string>
         <colorrole role="Base">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>233</red>
+           <red>187</red>
            <green>255</green>
-           <blue>233</blue>
+           <blue>206</blue>
           </color>
          </brush>
         </colorrole>
         <colorrole role="Window">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>233</red>
+           <red>187</red>
            <green>255</green>
-           <blue>233</blue>
+           <blue>206</blue>
           </color>
          </brush>
         </colorrole>
@@ -438,9 +438,9 @@ background-color: rgb(233, 255, 233);</string>
         <colorrole role="Button">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>233</red>
+           <red>187</red>
            <green>255</green>
-           <blue>233</blue>
+           <blue>206</blue>
           </color>
          </brush>
         </colorrole>
@@ -465,18 +465,18 @@ background-color: rgb(233, 255, 233);</string>
         <colorrole role="Base">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>233</red>
+           <red>187</red>
            <green>255</green>
-           <blue>233</blue>
+           <blue>206</blue>
           </color>
          </brush>
         </colorrole>
         <colorrole role="Window">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>233</red>
+           <red>187</red>
            <green>255</green>
-           <blue>233</blue>
+           <blue>206</blue>
           </color>
          </brush>
         </colorrole>
@@ -495,7 +495,7 @@ background-color: rgb(233, 255, 233);</string>
      <property name="styleSheet">
       <string notr="true">color: rgb(170, 85, 127);
 border:none;
-background-color: rgb(233, 255, 233);
+background-color: rgb(187, 255, 206);
 </string>
      </property>
      <property name="text">
@@ -660,7 +660,7 @@ background-color: rgb(255, 208, 215);</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 255, 233);</string>
+       <string notr="true"/>
       </property>
       <property name="title">
        <string>Commande Terminal</string>
@@ -830,6 +830,9 @@ background-color: rgb(255, 208, 215);</string>
          <height>23</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
        <property name="text">
         <string>-&gt;send</string>
        </property>
@@ -842,6 +845,9 @@ background-color: rgb(255, 208, 215);</string>
          <width>51</width>
          <height>23</height>
         </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
        </property>
        <property name="text">
         <string>-&gt;send</string>
