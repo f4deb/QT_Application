@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QtWidgets>
+#include <QtNetwork>
 #include <QtSerialPort/QSerialPortInfo>
 
 #include "console.h"
@@ -19,28 +21,49 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-    int etat_serial_port;
 
+    //Serial Port
+    int etat_serial_port;
     QSerialPort *serial;
     void openSerialPort();
     void closeSerialPort();
+
+    //Server
+    int etat_serveur_port;
 
 private:
     Ui::MainWindow *ui;
 
 private:
+    //TERMINAL
+    Console *m_console = nullptr;
+
+    // Port Serie
     void initSerialPort();
     void serialInit();
     void fillPortsParameters();
     void fillPortsInfo();
-
     void serialWrite(const QByteArray &data);
-    Console *m_console = nullptr;
+
+
+    // Server
+
+    void serverInit();
+
+    QTcpSocket *socket; // Représente le serveur
+    quint16 tailleMessage;
 
 public slots:
 
 
 private slots:
+
+    void donneesRecues();
+    void connecte();
+    void deconnecte();
+    void erreurSocket(QAbstractSocket::SocketError erreur);
+
+
     void on_pushButtonQuit_clicked();
     void on_buttonQuitter_clicked();
     void on_actionQuitter_changed();
@@ -67,5 +90,6 @@ private slots:
     void on_pushButton_Command_Terminal_9_clicked();
     void on_pushButton_Command_Terminal_10_clicked();
     void on_pushButton_Command_Terminal_11_clicked();
+    void on_Telnet_Connect_clicked();
 };
 #endif // MAINWINDOW_H

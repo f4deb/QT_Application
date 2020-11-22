@@ -23,6 +23,7 @@
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QRadioButton>
 #include <QtWidgets/QSlider>
+#include <QtWidgets/QSpinBox>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTabWidget>
 #include <QtWidgets/QTextBrowser>
@@ -37,13 +38,17 @@ public:
     QAction *actionA_propos;
     QAction *actionTerminal;
     QAction *actionServos;
+    QAction *actionRobot_Titan;
+    QAction *actionAfficheur_Matriciel;
+    QAction *actionCube_DEB1;
+    QAction *actionCube_DEB2;
     QWidget *centralwidget;
     QGroupBox *groupBox;
     QPushButton *Telnet_Connect;
     QLineEdit *Telnet_IP;
-    QLineEdit *Telnet_Port;
     QLabel *label;
     QLabel *label_2;
+    QSpinBox *Telnet_Port;
     QGroupBox *groupBox_2;
     QLabel *label_3;
     QLabel *label_4;
@@ -204,6 +209,7 @@ public:
     QMenu *menuFichier;
     QMenu *menu_Aide;
     QMenu *menuConfiguration;
+    QMenu *menuClient;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -219,6 +225,14 @@ public:
         actionTerminal->setObjectName(QString::fromUtf8("actionTerminal"));
         actionServos = new QAction(MainWindow);
         actionServos->setObjectName(QString::fromUtf8("actionServos"));
+        actionRobot_Titan = new QAction(MainWindow);
+        actionRobot_Titan->setObjectName(QString::fromUtf8("actionRobot_Titan"));
+        actionAfficheur_Matriciel = new QAction(MainWindow);
+        actionAfficheur_Matriciel->setObjectName(QString::fromUtf8("actionAfficheur_Matriciel"));
+        actionCube_DEB1 = new QAction(MainWindow);
+        actionCube_DEB1->setObjectName(QString::fromUtf8("actionCube_DEB1"));
+        actionCube_DEB2 = new QAction(MainWindow);
+        actionCube_DEB2->setObjectName(QString::fromUtf8("actionCube_DEB2"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         groupBox = new QGroupBox(centralwidget);
@@ -228,22 +242,24 @@ public:
         Telnet_Connect->setObjectName(QString::fromUtf8("Telnet_Connect"));
         Telnet_Connect->setGeometry(QRect(50, 80, 111, 23));
         Telnet_Connect->setStyleSheet(QString::fromUtf8("color: rgb(170, 85, 127);\n"
+"alternate-background-color: rgb(255, 0, 127);\n"
 "border:none;\n"
 "background-color: rgb(187, 255, 206);"));
         Telnet_IP = new QLineEdit(groupBox);
         Telnet_IP->setObjectName(QString::fromUtf8("Telnet_IP"));
         Telnet_IP->setGeometry(QRect(50, 20, 113, 20));
         Telnet_IP->setStyleSheet(QString::fromUtf8("background-color: rgb(211, 212, 255);"));
-        Telnet_Port = new QLineEdit(groupBox);
-        Telnet_Port->setObjectName(QString::fromUtf8("Telnet_Port"));
-        Telnet_Port->setGeometry(QRect(50, 50, 113, 20));
-        Telnet_Port->setStyleSheet(QString::fromUtf8("background-color: rgb(211, 212, 255);"));
         label = new QLabel(groupBox);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(10, 20, 47, 13));
         label_2 = new QLabel(groupBox);
         label_2->setObjectName(QString::fromUtf8("label_2"));
         label_2->setGeometry(QRect(10, 50, 47, 13));
+        Telnet_Port = new QSpinBox(groupBox);
+        Telnet_Port->setObjectName(QString::fromUtf8("Telnet_Port"));
+        Telnet_Port->setGeometry(QRect(50, 50, 111, 22));
+        Telnet_Port->setMaximum(99999);
+        Telnet_Port->setValue(50885);
         groupBox_2 = new QGroupBox(centralwidget);
         groupBox_2->setObjectName(QString::fromUtf8("groupBox_2"));
         groupBox_2->setGeometry(QRect(0, 110, 181, 231));
@@ -861,6 +877,8 @@ public:
         menu_Aide->setObjectName(QString::fromUtf8("menu_Aide"));
         menuConfiguration = new QMenu(menubar);
         menuConfiguration->setObjectName(QString::fromUtf8("menuConfiguration"));
+        menuClient = new QMenu(menubar);
+        menuClient->setObjectName(QString::fromUtf8("menuClient"));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -869,10 +887,15 @@ public:
         menubar->addAction(menuFichier->menuAction());
         menubar->addAction(menuConfiguration->menuAction());
         menubar->addAction(menu_Aide->menuAction());
+        menubar->addAction(menuClient->menuAction());
         menuFichier->addAction(actionQuitter);
         menu_Aide->addAction(actionA_propos);
         menuConfiguration->addAction(actionTerminal);
         menuConfiguration->addAction(actionServos);
+        menuClient->addAction(actionRobot_Titan);
+        menuClient->addAction(actionAfficheur_Matriciel);
+        menuClient->addAction(actionCube_DEB1);
+        menuClient->addAction(actionCube_DEB2);
 
         retranslateUi(MainWindow);
 
@@ -889,10 +912,13 @@ public:
         actionA_propos->setText(QCoreApplication::translate("MainWindow", "A propos", nullptr));
         actionTerminal->setText(QCoreApplication::translate("MainWindow", "Terminal", nullptr));
         actionServos->setText(QCoreApplication::translate("MainWindow", "Servos", nullptr));
+        actionRobot_Titan->setText(QCoreApplication::translate("MainWindow", "Robot Titan", nullptr));
+        actionAfficheur_Matriciel->setText(QCoreApplication::translate("MainWindow", "Afficheur Matriciel", nullptr));
+        actionCube_DEB1->setText(QCoreApplication::translate("MainWindow", "Cube DEB1", nullptr));
+        actionCube_DEB2->setText(QCoreApplication::translate("MainWindow", "Cube DEB2", nullptr));
         groupBox->setTitle(QCoreApplication::translate("MainWindow", "Telnet", nullptr));
         Telnet_Connect->setText(QCoreApplication::translate("MainWindow", "Connect", nullptr));
         Telnet_IP->setText(QCoreApplication::translate("MainWindow", "127.0.0.1", nullptr));
-        Telnet_Port->setText(QCoreApplication::translate("MainWindow", "50885", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "IP", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "Port", nullptr));
         groupBox_2->setTitle(QCoreApplication::translate("MainWindow", "Serial", nullptr));
@@ -1018,6 +1044,7 @@ public:
         menuFichier->setTitle(QCoreApplication::translate("MainWindow", "&Fichier", nullptr));
         menu_Aide->setTitle(QCoreApplication::translate("MainWindow", "&Aide", nullptr));
         menuConfiguration->setTitle(QCoreApplication::translate("MainWindow", "Configuration", nullptr));
+        menuClient->setTitle(QCoreApplication::translate("MainWindow", "Client", nullptr));
     } // retranslateUi
 
 };

@@ -28,6 +28,7 @@ MainWindow::MainWindow(QWidget *parent)
     m_console->setEnabled(false);
 
     serialInit();
+    serverInit();
 }
 
 
@@ -167,3 +168,21 @@ void MainWindow::on_pushButton_Command_Terminal_11_clicked()
     ui->plainTextEdit->setStyleSheet("background-color: rgb(0, 0, 0);color: rgb(255, 0, 0);");
     ui->plainTextEdit->insertPlainText(ui->Command_Terminal_11->text());
 }
+
+void MainWindow::on_Telnet_Connect_clicked()
+{
+    // On annonce sur la fenêtre qu'on est en train de se connecter
+    statusBar()->showMessage(tr("Tentative de connexion en cours..."));
+    //ui->Telnet_Connect->setEnabled(false);
+    socket->abort(); // On désactive les connexions précédentes s'il y en a
+    socket->connectToHost(ui->Telnet_IP->text(), ui->Telnet_Port->value()); // On se connecte au serveur demandé
+}
+
+
+
+
+
+
+
+
+

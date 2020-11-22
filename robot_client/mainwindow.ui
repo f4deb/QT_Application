@@ -37,6 +37,7 @@
      </property>
      <property name="styleSheet">
       <string notr="true">color: rgb(170, 85, 127);
+alternate-background-color: rgb(255, 0, 127);
 border:none;
 background-color: rgb(187, 255, 206);</string>
      </property>
@@ -58,22 +59,6 @@ background-color: rgb(187, 255, 206);</string>
      </property>
      <property name="text">
       <string>127.0.0.1</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="Telnet_Port">
-     <property name="geometry">
-      <rect>
-       <x>50</x>
-       <y>50</y>
-       <width>113</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(211, 212, 255);</string>
-     </property>
-     <property name="text">
-      <string>50885</string>
      </property>
     </widget>
     <widget class="QLabel" name="label">
@@ -100,6 +85,22 @@ background-color: rgb(187, 255, 206);</string>
      </property>
      <property name="text">
       <string>Port</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="Telnet_Port">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>50</y>
+       <width>111</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <number>99999</number>
+     </property>
+     <property name="value">
+      <number>50885</number>
      </property>
     </widget>
    </widget>
@@ -2471,9 +2472,19 @@ color: rgb(255, 255, 255);</string>
     <addaction name="actionTerminal"/>
     <addaction name="actionServos"/>
    </widget>
+   <widget class="QMenu" name="menuClient">
+    <property name="title">
+     <string>Client</string>
+    </property>
+    <addaction name="actionRobot_Titan"/>
+    <addaction name="actionAfficheur_Matriciel"/>
+    <addaction name="actionCube_DEB1"/>
+    <addaction name="actionCube_DEB2"/>
+   </widget>
    <addaction name="menuFichier"/>
    <addaction name="menuConfiguration"/>
    <addaction name="menu_Aide"/>
+   <addaction name="menuClient"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionQuitter">
@@ -2494,6 +2505,26 @@ color: rgb(255, 255, 255);</string>
   <action name="actionServos">
    <property name="text">
     <string>Servos</string>
+   </property>
+  </action>
+  <action name="actionRobot_Titan">
+   <property name="text">
+    <string>Robot Titan</string>
+   </property>
+  </action>
+  <action name="actionAfficheur_Matriciel">
+   <property name="text">
+    <string>Afficheur Matriciel</string>
+   </property>
+  </action>
+  <action name="actionCube_DEB1">
+   <property name="text">
+    <string>Cube DEB1</string>
+   </property>
+  </action>
+  <action name="actionCube_DEB2">
+   <property name="text">
+    <string>Cube DEB2</string>
    </property>
   </action>
  </widget>
