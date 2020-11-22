@@ -891,6 +891,8 @@ public:
         actionServos->setText(QCoreApplication::translate("MainWindow", "Servos", nullptr));
         groupBox->setTitle(QCoreApplication::translate("MainWindow", "Telnet", nullptr));
         Telnet_Connect->setText(QCoreApplication::translate("MainWindow", "Connect", nullptr));
+        Telnet_IP->setText(QCoreApplication::translate("MainWindow", "127.0.0.1", nullptr));
+        Telnet_Port->setText(QCoreApplication::translate("MainWindow", "50885", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "IP", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "Port", nullptr));
         groupBox_2->setTitle(QCoreApplication::translate("MainWindow", "Serial", nullptr));

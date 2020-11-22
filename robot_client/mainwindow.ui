@@ -56,6 +56,9 @@ background-color: rgb(187, 255, 206);</string>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(211, 212, 255);</string>
      </property>
+     <property name="text">
+      <string>127.0.0.1</string>
+     </property>
     </widget>
     <widget class="QLineEdit" name="Telnet_Port">
      <property name="geometry">
@@ -68,6 +71,9 @@ background-color: rgb(187, 255, 206);</string>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(211, 212, 255);</string>
+     </property>
+     <property name="text">
+      <string>50885</string>
      </property>
     </widget>
     <widget class="QLabel" name="label">
