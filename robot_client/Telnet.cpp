@@ -33,17 +33,16 @@ void MainWindow::donneesRecues()
         in >> tailleMessage;
     }
 
-    if (socket->bytesAvailable() < tailleMessage)
-        return;
-
+    //if (socket->bytesAvailable() < tailleMessage)
+      //  return;
 
     // Si on arrive jusqu'à cette ligne, on peut récupérer le message entier
     QString messageRecu;
     in >> messageRecu;
 
-    // On affiche le message sur la zone de Chat
-    //listeMessages->append(messageRecu);
-    ui->plainTextEdit->insertPlainText("Data server OK");
+
+    QByteArray datass = messageRecu.toUtf8();
+    ui->plainTextEdit->insertPlainText(datass);
 
     // On remet la taille du message à 0 pour pouvoir recevoir de futurs messages
     tailleMessage = 0;
@@ -52,33 +51,19 @@ void MainWindow::donneesRecues()
 // Ce slot est appelé lorsque la connexion au serveur a réussi
 void MainWindow::connecte()
 {
-
-
-
-    if (etat_serveur_port == 0) {
-        statusBar()->showMessage(tr("Server Port Disconnected"));
-        etat_serveur_port = 1;
-        return;
-    }
-    else {
-        statusBar()->showMessage(tr("Server Port connected"));
-        etat_serveur_port = 0;
-        return;
-    }
-
-
-    //statusBar()->showMessage("Connexion réussie");
-    //ui->Telnet_Connect->setEnabled(true);
-    //ui->Telnet_Connect->setStyleSheet("background-color: rgb(0, 0, 255);color: rgb(255, 0, 0);");
-    //etat_serveur_port = 1;
+    ui->Telnet_Connect->setStyleSheet("background-color: rgb(187, 255, 206);border:none;color: rgb(255, 0, 0);");
+    statusBar()->showMessage("Connexion réussie");
+    ui->Telnet_Connect->setText("Disconnect");
+    ui->Telnet_Connect->setEnabled(true);
 }
 
 // Ce slot est appelé lorsqu'on est déconnecté du serveur
 void MainWindow::deconnecte()
-{
+{    
+    ui->Telnet_Connect->setStyleSheet("background-color: rgb(255, 208, 215);border:none;color: rgb(170, 85, 127);");
     statusBar()->showMessage("Déconnecté du serveur");
-    ui->Telnet_Connect->setStyleSheet("background-color: rgb(0, 255, 0);color: rgb(255, 0, 0);");
-    etat_serveur_port = 0;
+    ui->Telnet_Connect->setText("Connect");
+    ui->Telnet_Connect->setEnabled(true);
 }
 
 // Ce slot est appelé lorsqu'il y a une erreur
@@ -98,6 +83,5 @@ void MainWindow::erreurSocket(QAbstractSocket::SocketError erreur)
         default:
             statusBar()->showMessage(("ERREUR : ") + socket->errorString());
     }
-
-    //boutonConnexion->setEnabled(true);
+    ui->Telnet_Connect->setEnabled(true);
 }

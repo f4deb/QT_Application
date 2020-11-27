@@ -72,6 +72,7 @@ void MainWindow::on_pushButton_Command_Terminal_1_clicked()
 
     ui->plainTextEdit->setStyleSheet("background-color: rgb(0, 0, 0);color: rgb(255, 0, 0);");
     ui->plainTextEdit->insertPlainText(ui->Command_Terminal_1->text());
+
 }
 
 void MainWindow::on_pushButton_Command_Terminal_2_clicked()
@@ -158,6 +159,25 @@ void MainWindow::on_pushButton_Command_Terminal_10_clicked()
 
     ui->plainTextEdit->setStyleSheet("background-color: rgb(0, 0, 0);color: rgb(255, 0, 0);");
     ui->plainTextEdit->insertPlainText(ui->Command_Terminal_10->text());
+
+
+    QByteArray paquet;
+    QDataStream out(&paquet, QIODevice::WriteOnly);
+
+    // On prépare le paquet à envoyer
+    QString messageAEnvoyer = datas;
+
+    out << (quint16) 0;
+    out << messageAEnvoyer;
+    out.device()->seek(0);
+    out << (quint16) (paquet.size() - sizeof(quint16));
+
+    socket->write(paquet); // On envoie le paquet
+
+
+
+
+
 }
 
 void MainWindow::on_pushButton_Command_Terminal_11_clicked()
@@ -173,9 +193,11 @@ void MainWindow::on_Telnet_Connect_clicked()
 {
     // On annonce sur la fenêtre qu'on est en train de se connecter
     statusBar()->showMessage(tr("Tentative de connexion en cours..."));
-    //ui->Telnet_Connect->setEnabled(false);
+    ui->Telnet_Connect->setEnabled(false);
     socket->abort(); // On désactive les connexions précédentes s'il y en a
     socket->connectToHost(ui->Telnet_IP->text(), ui->Telnet_Port->value()); // On se connecte au serveur demandé
+
+
 }
 
 
@@ -186,3 +208,8 @@ void MainWindow::on_Telnet_Connect_clicked()
 
 
 
+
+void MainWindow::on_pushButton_clicked()
+{
+    ui->plainTextEdit->clear();
+}

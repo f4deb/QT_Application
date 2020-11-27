@@ -8,7 +8,7 @@
 #include <QTextEdit>
 
 
-#include "serialConfig.h"
+
 
 
 

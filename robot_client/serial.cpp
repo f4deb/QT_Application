@@ -100,8 +100,10 @@ void MainWindow::openSerialPort(){
     if (etat_serial_port == 1) {
         serial->close();
         etat_serial_port = 0;
+
         ui->Serial_Connect->setText("Connect");
         statusBar()->showMessage(tr("Serial Port Disconnected"));
+        ui->Serial_Connect->setStyleSheet("color: rgb(170, 85, 127);border:none;background-color: rgb(255, 208, 215);");
         return;
     }
 
@@ -118,11 +120,13 @@ void MainWindow::openSerialPort(){
         statusBar()->showMessage(tr("Serial Port Connected"));
         QObject::connect(serial, SIGNAL(readyRead()), this, SLOT(readData()));
         etat_serial_port = 1;
+        ui->Serial_Connect->setStyleSheet("background-color: rgb(187, 255, 206);border:none;color: rgb(255, 0, 0);");
     } else {
         ui->Serial_Connect->setText("Connect");
         QObject::disconnect(serial, SIGNAL(readyRead()), this, SLOT(readData()));
         statusBar()->showMessage(tr("Serial Port error"));
         etat_serial_port = -1;
+        ui->Serial_Connect->setStyleSheet("color: rgb(170, 85, 127);border:none;background-color: rgb(255, 208, 215);");
     }
 }
 
@@ -134,7 +138,6 @@ void MainWindow::closeSerialPort()
 
 void MainWindow::initSerialPort(){
 
-       //QMessageBox::information(this,"debug",QString("%1").arg(ui->Serial_Data_Bits->currentText()));
 }
 
 void MainWindow::serialWrite(const QByteArray &data){

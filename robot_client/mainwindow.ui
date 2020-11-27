@@ -37,9 +37,8 @@
      </property>
      <property name="styleSheet">
       <string notr="true">color: rgb(170, 85, 127);
-alternate-background-color: rgb(255, 0, 127);
 border:none;
-background-color: rgb(187, 255, 206);</string>
+background-color: rgb(255, 208, 215);</string>
      </property>
      <property name="text">
       <string>Connect</string>
@@ -315,9 +314,9 @@ background-color: rgb(187, 255, 206);</string>
         <colorrole role="Button">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>187</red>
-           <green>255</green>
-           <blue>206</blue>
+           <red>255</red>
+           <green>208</green>
+           <blue>215</blue>
           </color>
          </brush>
         </colorrole>
@@ -342,18 +341,18 @@ background-color: rgb(187, 255, 206);</string>
         <colorrole role="Base">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>187</red>
-           <green>255</green>
-           <blue>206</blue>
+           <red>255</red>
+           <green>208</green>
+           <blue>215</blue>
           </color>
          </brush>
         </colorrole>
         <colorrole role="Window">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>187</red>
-           <green>255</green>
-           <blue>206</blue>
+           <red>255</red>
+           <green>208</green>
+           <blue>215</blue>
           </color>
          </brush>
         </colorrole>
@@ -380,9 +379,9 @@ background-color: rgb(187, 255, 206);</string>
         <colorrole role="Button">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>187</red>
-           <green>255</green>
-           <blue>206</blue>
+           <red>255</red>
+           <green>208</green>
+           <blue>215</blue>
           </color>
          </brush>
         </colorrole>
@@ -407,18 +406,18 @@ background-color: rgb(187, 255, 206);</string>
         <colorrole role="Base">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>187</red>
-           <green>255</green>
-           <blue>206</blue>
+           <red>255</red>
+           <green>208</green>
+           <blue>215</blue>
           </color>
          </brush>
         </colorrole>
         <colorrole role="Window">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>187</red>
-           <green>255</green>
-           <blue>206</blue>
+           <red>255</red>
+           <green>208</green>
+           <blue>215</blue>
           </color>
          </brush>
         </colorrole>
@@ -445,9 +444,9 @@ background-color: rgb(187, 255, 206);</string>
         <colorrole role="Button">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>187</red>
-           <green>255</green>
-           <blue>206</blue>
+           <red>255</red>
+           <green>208</green>
+           <blue>215</blue>
           </color>
          </brush>
         </colorrole>
@@ -472,18 +471,18 @@ background-color: rgb(187, 255, 206);</string>
         <colorrole role="Base">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>187</red>
-           <green>255</green>
-           <blue>206</blue>
+           <red>255</red>
+           <green>208</green>
+           <blue>215</blue>
           </color>
          </brush>
         </colorrole>
         <colorrole role="Window">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>187</red>
-           <green>255</green>
-           <blue>206</blue>
+           <red>255</red>
+           <green>208</green>
+           <blue>215</blue>
           </color>
          </brush>
         </colorrole>
@@ -502,8 +501,7 @@ background-color: rgb(187, 255, 206);</string>
      <property name="styleSheet">
       <string notr="true">color: rgb(170, 85, 127);
 border:none;
-background-color: rgb(187, 255, 206);
-</string>
+background-color: rgb(255, 208, 215);</string>
      </property>
      <property name="text">
       <string>Connect</string>
@@ -962,6 +960,23 @@ background-color: rgb(255, 208, 215);</string>
        </property>
        <property name="text">
         <string>-&gt;send</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>570</y>
+         <width>81</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(211, 212, 255);
+color: rgb(170, 0, 127);</string>
+       </property>
+       <property name="text">
+        <string>Clear Terminal</string>
        </property>
       </widget>
      </widget>

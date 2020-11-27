@@ -96,6 +96,7 @@ public:
     QPushButton *pushButton_Command_Terminal_9;
     QPushButton *pushButton_Command_Terminal_10;
     QPushButton *pushButton_Command_Terminal_11;
+    QPushButton *pushButton;
     QPlainTextEdit *plainTextEdit;
     QWidget *tab_6;
     QWidget *tab_2;
@@ -242,9 +243,8 @@ public:
         Telnet_Connect->setObjectName(QString::fromUtf8("Telnet_Connect"));
         Telnet_Connect->setGeometry(QRect(50, 80, 111, 23));
         Telnet_Connect->setStyleSheet(QString::fromUtf8("color: rgb(170, 85, 127);\n"
-"alternate-background-color: rgb(255, 0, 127);\n"
 "border:none;\n"
-"background-color: rgb(187, 255, 206);"));
+"background-color: rgb(255, 208, 215);"));
         Telnet_IP = new QLineEdit(groupBox);
         Telnet_IP->setObjectName(QString::fromUtf8("Telnet_IP"));
         Telnet_IP->setGeometry(QRect(50, 20, 113, 20));
@@ -314,7 +314,7 @@ public:
         QBrush brush(QColor(170, 85, 127, 255));
         brush.setStyle(Qt::SolidPattern);
         palette.setBrush(QPalette::Active, QPalette::WindowText, brush);
-        QBrush brush1(QColor(187, 255, 206, 255));
+        QBrush brush1(QColor(255, 208, 215, 255));
         brush1.setStyle(Qt::SolidPattern);
         palette.setBrush(QPalette::Active, QPalette::Button, brush1);
         palette.setBrush(QPalette::Active, QPalette::Text, brush);
@@ -351,8 +351,7 @@ public:
         Serial_Connect->setPalette(palette);
         Serial_Connect->setStyleSheet(QString::fromUtf8("color: rgb(170, 85, 127);\n"
 "border:none;\n"
-"background-color: rgb(187, 255, 206);\n"
-""));
+"background-color: rgb(255, 208, 215);"));
         groupBox_3 = new QGroupBox(centralwidget);
         groupBox_3->setObjectName(QString::fromUtf8("groupBox_3"));
         groupBox_3->setGeometry(QRect(0, 360, 181, 321));
@@ -476,6 +475,11 @@ public:
         pushButton_Command_Terminal_11 = new QPushButton(groupBox_4);
         pushButton_Command_Terminal_11->setObjectName(QString::fromUtf8("pushButton_Command_Terminal_11"));
         pushButton_Command_Terminal_11->setGeometry(QRect(170, 330, 51, 23));
+        pushButton = new QPushButton(groupBox_4);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setGeometry(QRect(80, 570, 81, 23));
+        pushButton->setStyleSheet(QString::fromUtf8("background-color: rgb(211, 212, 255);\n"
+"color: rgb(170, 0, 127);"));
         plainTextEdit = new QPlainTextEdit(tab);
         plainTextEdit->setObjectName(QString::fromUtf8("plainTextEdit"));
         plainTextEdit->setGeometry(QRect(250, 20, 771, 581));
@@ -955,6 +959,7 @@ public:
         pushButton_Command_Terminal_9->setText(QCoreApplication::translate("MainWindow", "->send", nullptr));
         pushButton_Command_Terminal_10->setText(QCoreApplication::translate("MainWindow", "->send", nullptr));
         pushButton_Command_Terminal_11->setText(QCoreApplication::translate("MainWindow", "->send", nullptr));
+        pushButton->setText(QCoreApplication::translate("MainWindow", "Clear Terminal", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("MainWindow", "Terminal", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_6), QCoreApplication::translate("MainWindow", "Tableau de bord", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("MainWindow", "Run", nullptr));

@@ -91,5 +91,6 @@ private slots:
     void on_pushButton_Command_Terminal_10_clicked();
     void on_pushButton_Command_Terminal_11_clicked();
     void on_Telnet_Connect_clicked();
+    void on_pushButton_clicked();
 };
 #endif // MAINWINDOW_H
