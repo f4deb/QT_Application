@@ -19,7 +19,6 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
-#include <QtWidgets/QPlainTextEdit>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QRadioButton>
 #include <QtWidgets/QSlider>
@@ -27,6 +26,7 @@
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTabWidget>
 #include <QtWidgets/QTextBrowser>
+#include <QtWidgets/QTextEdit>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -97,7 +97,7 @@ public:
     QPushButton *pushButton_Command_Terminal_10;
     QPushButton *pushButton_Command_Terminal_11;
     QPushButton *pushButton;
-    QPlainTextEdit *plainTextEdit;
+    QTextEdit *textEdit;
     QWidget *tab_6;
     QWidget *tab_2;
     QWidget *tab_4;
@@ -259,7 +259,7 @@ public:
         Telnet_Port->setObjectName(QString::fromUtf8("Telnet_Port"));
         Telnet_Port->setGeometry(QRect(50, 50, 111, 22));
         Telnet_Port->setMaximum(99999);
-        Telnet_Port->setValue(50885);
+        Telnet_Port->setValue(23);
         groupBox_2 = new QGroupBox(centralwidget);
         groupBox_2->setObjectName(QString::fromUtf8("groupBox_2"));
         groupBox_2->setGeometry(QRect(0, 110, 181, 231));
@@ -480,10 +480,10 @@ public:
         pushButton->setGeometry(QRect(80, 570, 81, 23));
         pushButton->setStyleSheet(QString::fromUtf8("background-color: rgb(211, 212, 255);\n"
 "color: rgb(170, 0, 127);"));
-        plainTextEdit = new QPlainTextEdit(tab);
-        plainTextEdit->setObjectName(QString::fromUtf8("plainTextEdit"));
-        plainTextEdit->setGeometry(QRect(250, 20, 771, 581));
-        plainTextEdit->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 0, 0);\n"
+        textEdit = new QTextEdit(tab);
+        textEdit->setObjectName(QString::fromUtf8("textEdit"));
+        textEdit->setGeometry(QRect(250, 20, 771, 581));
+        textEdit->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 0, 0);\n"
 "color: rgb(255, 255, 255);"));
         tabWidget->addTab(tab, QString());
         tab_6 = new QWidget();
@@ -922,7 +922,7 @@ public:
         actionCube_DEB2->setText(QCoreApplication::translate("MainWindow", "Cube DEB2", nullptr));
         groupBox->setTitle(QCoreApplication::translate("MainWindow", "Telnet", nullptr));
         Telnet_Connect->setText(QCoreApplication::translate("MainWindow", "Connect", nullptr));
-        Telnet_IP->setText(QCoreApplication::translate("MainWindow", "127.0.0.1", nullptr));
+        Telnet_IP->setText(QCoreApplication::translate("MainWindow", "192.168.4.1", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "IP", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "Port", nullptr));
         groupBox_2->setTitle(QCoreApplication::translate("MainWindow", "Serial", nullptr));

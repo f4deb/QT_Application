@@ -33,16 +33,14 @@ void MainWindow::donneesRecues()
         in >> tailleMessage;
     }
 
-    //if (socket->bytesAvailable() < tailleMessage)
-      //  return;
-
     // Si on arrive jusqu'à cette ligne, on peut récupérer le message entier
     QString messageRecu;
     in >> messageRecu;
 
-
+    //ui->plainTextEdit->setStyleSheet("background-color: rgb(0, 0, 0);color: rgb(0, 255, 0);");
     QByteArray datass = messageRecu.toUtf8();
-    ui->plainTextEdit->insertPlainText(datass);
+    ui->textEdit->setTextColor(QColor("green"));
+    ui->textEdit->append(datass);
 
     // On remet la taille du message à 0 pour pouvoir recevoir de futurs messages
     tailleMessage = 0;

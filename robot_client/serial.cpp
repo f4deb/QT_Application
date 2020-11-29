@@ -148,10 +148,7 @@ void MainWindow::serialWrite(const QByteArray &data){
 void MainWindow::readData(){
     while (serial->waitForReadyRead(10));
     QByteArray datass = serial->readAll();
-    //envoyerATous(datass);
 
-    QTextCharFormat tf;
-    tf = ui->plainTextEdit->currentCharFormat();
-    tf.setForeground(QBrush(qRgb(0,0,255)));
-    ui->plainTextEdit->insertPlainText(datass);
+    ui->textEdit->setTextColor(QColor("green"));
+    ui->textEdit->append(datass);
 }

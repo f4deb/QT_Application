@@ -53,6 +53,8 @@ private:
     QTcpSocket *socket; // Représente le serveur
     quint16 tailleMessage;
 
+    void transmitAll(QString text);
+
 public slots:
 
 

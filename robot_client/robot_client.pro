@@ -21,7 +21,8 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     menu.cpp \
-    serial.cpp
+    serial.cpp \
+    transmitAll.cpp
     ./Qt-custom-gauge-widget-master/source/qcgaugewidget.cpp
     ./qcustomplot/qcustomplot.cpp
 
@@ -30,7 +31,8 @@ HEADERS += \
     console.h \
     mainwindow.h \
     menu.h \
-    serial.h
+    serial.h \
+    transmitAll.h
     ./Qt-custom-gauge-widget-master/source/qcgaugewidget.h
     ./qcustomplot/qcustomplot.h
 

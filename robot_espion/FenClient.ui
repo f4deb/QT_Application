@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>ZeroChat - Client</string>
+   <string>F4DEB Network Spy</string>
   </property>
   <property name="windowIcon">
    <iconset>
@@ -59,13 +59,13 @@
         <bool>true</bool>
        </property>
        <property name="minimum">
-        <number>1024</number>
+        <number>1</number>
        </property>
        <property name="maximum">
         <number>65535</number>
        </property>
        <property name="value">
-        <number>50885</number>
+        <number>23</number>
        </property>
       </widget>
      </item>
@@ -92,13 +92,6 @@
      <item>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
-        <widget class="QLabel" name="label_5">
-         <property name="pixmap">
-          <pixmap>chat.png</pixmap>
-         </property>
-        </widget>
-       </item>
-       <item>
         <widget class="QLabel" name="label_6">
          <property name="font">
           <font>
@@ -108,7 +101,7 @@
           </font>
          </property>
          <property name="text">
-          <string>ZeroChat</string>
+          <string>F4DEB Network  Spy V 0.1</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>

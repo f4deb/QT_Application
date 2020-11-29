@@ -51,7 +51,7 @@ MainWindow::MainWindow()
     layout->addWidget(boutonQuitter);
     setLayout(layout);
 
-    setWindowTitle(tr("ZeroChat - Serveur"));
+    setWindowTitle(tr("F4DEB - Serveur"));
 
     // Gestion du serveur
     serveur = new QTcpServer(this);
