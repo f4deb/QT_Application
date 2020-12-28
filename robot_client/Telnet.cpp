@@ -23,6 +23,13 @@ void MainWindow::donneesRecues()
     On essaie de récupérer la taille du message
     Une fois qu'on l'a, on attend d'avoir reçu le message entier (en se basant sur la taille annoncée tailleMessage)
     */
+
+    while ( socket->canReadLine() ) {
+                //ui->textEdit->append( socket->readLine() );
+
+
+
+
     QDataStream in(socket);
 
     if (tailleMessage == 0)
@@ -33,18 +40,22 @@ void MainWindow::donneesRecues()
         in >> tailleMessage;
     }
 
+    if (socket->bytesAvailable() < tailleMessage)
+       return;
+//ui->textEdit->append( socket->readLine());
     // Si on arrive jusqu'à cette ligne, on peut récupérer le message entier
     QString messageRecu;
     in >> messageRecu;
 
-    //ui->plainTextEdit->setStyleSheet("background-color: rgb(0, 0, 0);color: rgb(0, 255, 0);");
     QByteArray datass = messageRecu.toUtf8();
     ui->textEdit->setTextColor(QColor("green"));
-    ui->textEdit->append(datass);
+    ui->textEdit->insertPlainText (datass);
+    ui->textEdit->verticalScrollBar()->setValue(ui->textEdit->verticalScrollBar()->maximum());
 
     // On remet la taille du message à 0 pour pouvoir recevoir de futurs messages
     tailleMessage = 0;
-}
+
+}}
 
 // Ce slot est appelé lorsque la connexion au serveur a réussi
 void MainWindow::connecte()

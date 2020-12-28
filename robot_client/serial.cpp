@@ -146,9 +146,10 @@ void MainWindow::serialWrite(const QByteArray &data){
 }
 
 void MainWindow::readData(){
-    while (serial->waitForReadyRead(10));
+    //while (serial->waitForReadyRead(100));
     QByteArray datass = serial->readAll();
 
     ui->textEdit->setTextColor(QColor("green"));
-    ui->textEdit->append(datass);
+    ui->textEdit->insertPlainText (datass);
+    ui->textEdit->verticalScrollBar()->setValue(ui->textEdit->verticalScrollBar()->maximum());
 }

@@ -28,6 +28,7 @@ void MainWindow::transmitAll(QString text){
 
 
     ui->textEdit->setTextColor(QColor("red"));
-    ui->textEdit->append(text);
+    ui->textEdit->append(text+"\n");
+    ui->textEdit->verticalScrollBar()->setValue(ui->textEdit->verticalScrollBar()->maximum());
 
 }
