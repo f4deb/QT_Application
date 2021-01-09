@@ -96,5 +96,13 @@ private slots:
     void on_pushButton_clicked();
     void on_pushButtonReset_clicked();
     void on_pushButtonStopMotor_clicked();
+    void on_pushButton_2_clicked();
+    void on_resetLeftTrackSlider_clicked();
+    void on_resetRightTrackSlider_clicked();
+    void on_leftTrackSlider_sliderMoved(int position);
+    void on_rightTrackSlider_actionTriggered(int action);
+    void on_rightTrackSlider_sliderMoved(int position);
+    void on_leftTrackSlider_valueChanged(int value);
+    void on_rightTrackSlider_valueChanged(int value);
 };
 #endif // MAINWINDOW_H

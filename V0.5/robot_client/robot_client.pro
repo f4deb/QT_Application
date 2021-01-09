@@ -1,6 +1,7 @@
-QT       += core gui widgets network serialport printsupport
+QT       += core gui widgets network serialport printsupport gamepad
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+
 
 CONFIG += c++11
 

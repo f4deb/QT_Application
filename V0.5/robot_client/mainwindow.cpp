@@ -1,11 +1,14 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-#include <QtWidgets>
-#include <QTableWidget>
 #include <QPushButton>
+#include <QTableWidget>
+#include <QtGamepad>
+#include <QtWidgets>
 #include <QVBoxLayout>
 #include <QWidget>
+
+
 
 #include <QtSerialPort/QSerialPortInfo>
 
@@ -145,4 +148,44 @@ void MainWindow::on_pushButtonReset_clicked()
 void MainWindow::on_pushButtonStopMotor_clicked()
 {
     transmitAll("Mc");
+}
+
+void MainWindow::on_pushButton_2_clicked()
+{
+
+}
+
+void MainWindow::on_resetLeftTrackSlider_clicked()
+{
+    ui->leftTrackSlider->setValue(ui->leftTrackSlider->maximum()/2 +1);
+}
+
+void MainWindow::on_resetRightTrackSlider_clicked()
+{
+    ui->rightTrackSlider->setValue(ui->rightTrackSlider->maximum()/2 +1);
+}
+
+void MainWindow::on_leftTrackSlider_sliderMoved(int position)
+{
+
+}
+
+void MainWindow::on_rightTrackSlider_actionTriggered(int action)
+{
+
+}
+
+void MainWindow::on_rightTrackSlider_sliderMoved(int position)
+{
+
+}
+
+void MainWindow::on_leftTrackSlider_valueChanged(int value)
+{
+    ui->lcdNumberLeftTrackSlider->display(value);
+}
+
+void MainWindow::on_rightTrackSlider_valueChanged(int value)
+{
+    ui->lcdNumberRightTrackSlider->display(value);
 }
