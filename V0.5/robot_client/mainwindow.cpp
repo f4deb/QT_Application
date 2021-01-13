@@ -8,7 +8,7 @@
 #include <QVBoxLayout>
 #include <QWidget>
 
-
+#include <QtGamepad/QGamepad>
 
 #include <QtSerialPort/QSerialPortInfo>
 
@@ -33,6 +33,88 @@ MainWindow::MainWindow(QWidget *parent)
 
     serialInit();
     serverInit();
+    //gamepadInit();
+
+
+
+
+
+    QLoggingCategory::setFilterRules(QStringLiteral("qt.gamepad.debug=true"));
+    QGamepadManager* gamepad_manager = QGamepadManager::instance();
+    auto gamepads = QGamepadManager::instance()->connectedGamepads();
+    int i = 0;
+    while (i < 10)
+    {
+        QCoreApplication::processEvents();
+        gamepads = gamepad_manager->connectedGamepads();
+        if(!gamepads.isEmpty())
+        {
+            i = 10;
+        }
+        i++;
+    }
+
+
+
+
+
+
+
+
+
+
+    if (gamepads.isEmpty()) {
+        qDebug() << "Did not find any connected gamepad";
+        return;
+    }
+
+    m_gamepad = new QGamepad(*gamepads.begin(), this);
+
+    connect(m_gamepad, &QGamepad::axisLeftXChanged, this, [](double value){
+        qDebug() << "Left X" << value;
+    });
+    connect(m_gamepad, &QGamepad::axisLeftYChanged, this, [](double value){
+        qDebug() << "Left Y" << value;
+    });
+    connect(m_gamepad, &QGamepad::axisRightXChanged, this, [](double value){
+        qDebug() << "Right X" << value;
+    });
+    connect(m_gamepad, &QGamepad::axisRightYChanged, this, [](double value){
+        qDebug() << "Right Y" << value;
+    });
+    connect(m_gamepad, &QGamepad::buttonAChanged, this, [](bool pressed){
+        qDebug() << "Button A" << pressed;
+    });
+    connect(m_gamepad, &QGamepad::buttonBChanged, this, [](bool pressed){
+        qDebug() << "Button B" << pressed;
+    });
+    connect(m_gamepad, &QGamepad::buttonXChanged, this, [](bool pressed){
+        qDebug() << "Button X" << pressed;
+    });
+    connect(m_gamepad, &QGamepad::buttonYChanged, this, [](bool pressed){
+        qDebug() << "Button Y" << pressed;
+    });
+    connect(m_gamepad, &QGamepad::buttonL1Changed, this, [](bool pressed){
+        qDebug() << "Button L1" << pressed;
+    });
+    connect(m_gamepad, &QGamepad::buttonR1Changed, this, [](bool pressed){
+        qDebug() << "Button R1" << pressed;
+    });
+    connect(m_gamepad, &QGamepad::buttonL2Changed, this, [](double value){
+        qDebug() << "Button L2: " << value;
+    });
+    connect(m_gamepad, &QGamepad::buttonR2Changed, this, [](double value){
+        qDebug() << "Button R2: " << value;
+    });
+    connect(m_gamepad, &QGamepad::buttonSelectChanged, this, [](bool pressed){
+        qDebug() << "Button Select" << pressed;
+    });
+    connect(m_gamepad, &QGamepad::buttonStartChanged, this, [](bool pressed){
+        qDebug() << "Button Start" << pressed;
+    });
+    connect(m_gamepad, &QGamepad::buttonGuideChanged, this, [](bool pressed){
+        qDebug() << "Button Guide" << pressed;
+    });
 }
 
 MainWindow::~MainWindow()
@@ -157,27 +239,12 @@ void MainWindow::on_pushButton_2_clicked()
 
 void MainWindow::on_resetLeftTrackSlider_clicked()
 {
-    ui->leftTrackSlider->setValue(ui->leftTrackSlider->maximum()/2 +1);
+    ui->leftTrackSlider->setValue(ui->leftTrackSlider->maximum() -127);
 }
 
 void MainWindow::on_resetRightTrackSlider_clicked()
 {
-    ui->rightTrackSlider->setValue(ui->rightTrackSlider->maximum()/2 +1);
-}
-
-void MainWindow::on_leftTrackSlider_sliderMoved(int position)
-{
-
-}
-
-void MainWindow::on_rightTrackSlider_actionTriggered(int action)
-{
-
-}
-
-void MainWindow::on_rightTrackSlider_sliderMoved(int position)
-{
-
+    ui->rightTrackSlider->setValue(ui->rightTrackSlider->maximum() -127);
 }
 
 void MainWindow::on_leftTrackSlider_valueChanged(int value)
@@ -188,4 +255,10 @@ void MainWindow::on_leftTrackSlider_valueChanged(int value)
 void MainWindow::on_rightTrackSlider_valueChanged(int value)
 {
     ui->lcdNumberRightTrackSlider->display(value);
+}
+
+void MainWindow::on_pushButton_StropTrack_clicked()
+{
+    ui->leftTrackSlider->setValue(ui->leftTrackSlider->maximum() -127);
+    ui->rightTrackSlider->setValue(ui->rightTrackSlider->maximum() -127);
 }

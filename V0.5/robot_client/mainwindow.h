@@ -6,6 +6,11 @@
 #include <QtNetwork>
 #include <QtSerialPort/QSerialPortInfo>
 
+#include <QtGamepad/QGamepad>
+
+#include <QDebug>
+#include <QLoggingCategory>
+
 #include "console.h"
 
 
@@ -21,7 +26,6 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-
     //Serial Port
     int etat_serial_port;
     QSerialPort *serial;
@@ -35,6 +39,9 @@ private:
     Ui::MainWindow *ui;
 
 private:
+    //GAMEPAD
+    QGamepad *m_gamepad;
+
     //TERMINAL
     Console *m_console = nullptr;
 
@@ -99,10 +106,8 @@ private slots:
     void on_pushButton_2_clicked();
     void on_resetLeftTrackSlider_clicked();
     void on_resetRightTrackSlider_clicked();
-    void on_leftTrackSlider_sliderMoved(int position);
-    void on_rightTrackSlider_actionTriggered(int action);
-    void on_rightTrackSlider_sliderMoved(int position);
     void on_leftTrackSlider_valueChanged(int value);
     void on_rightTrackSlider_valueChanged(int value);
+    void on_pushButton_StropTrack_clicked();
 };
 #endif // MAINWINDOW_H
