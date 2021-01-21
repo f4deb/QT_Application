@@ -1,13 +1,13 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+#include <QPainter>
 #include <QPushButton>
 #include <QTableWidget>
 #include <QtGamepad>
 #include <QtWidgets>
 #include <QVBoxLayout>
 #include <QWidget>
-
 #include <QtGamepad/QGamepad>
 
 #include <QtSerialPort/QSerialPortInfo>
@@ -15,8 +15,9 @@
 #include "./Qt-custom-gauge-widget-master/source/qcgaugewidget.h"
 #include "./qcustomplot/qcustomplot.h"
 
-#include "serial.h"
 #include "console.h"
+#include "gamepadRobotClient.h"
+#include "serial.h"
 #include "transmitAll.h"
 
 extern int etat_serial_port;
@@ -33,88 +34,9 @@ MainWindow::MainWindow(QWidget *parent)
 
     serialInit();
     serverInit();
-    //gamepadInit();
+    gamepadInit();
 
 
-
-
-
-    QLoggingCategory::setFilterRules(QStringLiteral("qt.gamepad.debug=true"));
-    QGamepadManager* gamepad_manager = QGamepadManager::instance();
-    auto gamepads = QGamepadManager::instance()->connectedGamepads();
-    int i = 0;
-    while (i < 10)
-    {
-        QCoreApplication::processEvents();
-        gamepads = gamepad_manager->connectedGamepads();
-        if(!gamepads.isEmpty())
-        {
-            i = 10;
-        }
-        i++;
-    }
-
-
-
-
-
-
-
-
-
-
-    if (gamepads.isEmpty()) {
-        qDebug() << "Did not find any connected gamepad";
-        return;
-    }
-
-    m_gamepad = new QGamepad(*gamepads.begin(), this);
-
-    connect(m_gamepad, &QGamepad::axisLeftXChanged, this, [](double value){
-        qDebug() << "Left X" << value;
-    });
-    connect(m_gamepad, &QGamepad::axisLeftYChanged, this, [](double value){
-        qDebug() << "Left Y" << value;
-    });
-    connect(m_gamepad, &QGamepad::axisRightXChanged, this, [](double value){
-        qDebug() << "Right X" << value;
-    });
-    connect(m_gamepad, &QGamepad::axisRightYChanged, this, [](double value){
-        qDebug() << "Right Y" << value;
-    });
-    connect(m_gamepad, &QGamepad::buttonAChanged, this, [](bool pressed){
-        qDebug() << "Button A" << pressed;
-    });
-    connect(m_gamepad, &QGamepad::buttonBChanged, this, [](bool pressed){
-        qDebug() << "Button B" << pressed;
-    });
-    connect(m_gamepad, &QGamepad::buttonXChanged, this, [](bool pressed){
-        qDebug() << "Button X" << pressed;
-    });
-    connect(m_gamepad, &QGamepad::buttonYChanged, this, [](bool pressed){
-        qDebug() << "Button Y" << pressed;
-    });
-    connect(m_gamepad, &QGamepad::buttonL1Changed, this, [](bool pressed){
-        qDebug() << "Button L1" << pressed;
-    });
-    connect(m_gamepad, &QGamepad::buttonR1Changed, this, [](bool pressed){
-        qDebug() << "Button R1" << pressed;
-    });
-    connect(m_gamepad, &QGamepad::buttonL2Changed, this, [](double value){
-        qDebug() << "Button L2: " << value;
-    });
-    connect(m_gamepad, &QGamepad::buttonR2Changed, this, [](double value){
-        qDebug() << "Button R2: " << value;
-    });
-    connect(m_gamepad, &QGamepad::buttonSelectChanged, this, [](bool pressed){
-        qDebug() << "Button Select" << pressed;
-    });
-    connect(m_gamepad, &QGamepad::buttonStartChanged, this, [](bool pressed){
-        qDebug() << "Button Start" << pressed;
-    });
-    connect(m_gamepad, &QGamepad::buttonGuideChanged, this, [](bool pressed){
-        qDebug() << "Button Guide" << pressed;
-    });
 }
 
 MainWindow::~MainWindow()
@@ -261,4 +183,84 @@ void MainWindow::on_pushButton_StropTrack_clicked()
 {
     ui->leftTrackSlider->setValue(ui->leftTrackSlider->maximum() -127);
     ui->rightTrackSlider->setValue(ui->rightTrackSlider->maximum() -127);
+}
+
+void MainWindow::on_radioButton_Y_toggled(bool checked)
+{
+    if (checked) {
+        qDebug() << "on_radioButton_Y_toggled" << checked;
+    }
+    else {
+        qDebug() << "on_radioButton_Y_toggled" << checked;
+    }
+}
+
+void MainWindow::on_radioButton_X_toggled(bool checked)
+{
+    if (checked) {
+        qDebug() << "on_radioButton_X_toggled" << checked;
+    }
+    else {
+        qDebug() << "on_radioButton_X_toggled" << checked;
+    }
+}
+
+void MainWindow::on_radioButton_B_toggled(bool checked)
+{
+    if (checked) {
+        qDebug() << "on_radioButton_B_toggled" << checked;
+    }
+    else {
+        qDebug() << "on_radioButton_B_toggled" << checked;
+    }
+}
+
+void MainWindow::on_radioButton_A_toggled(bool checked)
+{
+    if (checked) {
+        qDebug() << "on_radioButton_A_toggled" << checked;
+    }
+    else {
+        qDebug() << "on_radioButton_A_toggled" << checked;
+    }
+}
+
+void MainWindow::on_radioButton_Up_toggled(bool checked)
+{
+    if (checked) {
+        qDebug() << "on_radioButton_Up_toggled" << checked;
+    }
+    else {
+        qDebug() << "on_radioButton_Up_toggled" << checked;
+    }
+}
+
+void MainWindow::on_radioButton_Left_toggled(bool checked)
+{
+    if (checked) {
+        qDebug() << "on_radioButton_Left_toggled" << checked;
+    }
+    else {
+        qDebug() << "on_radioButton_Left_toggled" << checked;
+    }
+}
+
+void MainWindow::on_radioButton_Down_toggled(bool checked)
+{
+    if (checked) {
+        qDebug() << "on_radioButton_Down_toggled" << checked;
+    }
+    else {
+        qDebug() << "on_radioButton_Down_toggled" << checked;
+    }
+}
+
+void MainWindow::on_radioButton_Right_toggled(bool checked)
+{
+    if (checked) {
+        qDebug() << "on_radioButton_Right_toggled" << checked;
+    }
+    else {
+        qDebug() << "on_radioButton_Right_toggled" << checked;
+    }
 }

@@ -19,6 +19,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     Telnet.cpp \
     console.cpp \
+    gamepadRobotClient.cpp \
     main.cpp \
     mainwindow.cpp \
     menu.cpp \
@@ -30,6 +31,7 @@ SOURCES += \
 HEADERS += \
     Telnet.h \
     console.h \
+    gamepadRobotClient.h \
     mainwindow.h \
     menu.h \
     serial.h \

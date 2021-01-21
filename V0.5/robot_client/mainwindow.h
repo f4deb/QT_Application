@@ -62,6 +62,22 @@ private:
 
     void transmitAll(QString text);
 
+    // Gamepad
+    void gamepadInit();
+    void radioButtonA(bool status);
+    void radioButtonB(bool status);
+    void radioButtonX(bool status);
+    void radioButtonY(bool status);
+    void radioButtonL1(bool status);
+    void radioButtonR1(bool status);
+    void radioButtonSelect(bool status);
+    void radioButtonStart(bool status);
+    void radioButtonLeft(bool status);
+    void radioButtonRight(bool status);
+    void radioButtonUp(bool status);
+    void radioButtonDown(bool status);
+
+
 public slots:
 
 
@@ -109,5 +125,13 @@ private slots:
     void on_leftTrackSlider_valueChanged(int value);
     void on_rightTrackSlider_valueChanged(int value);
     void on_pushButton_StropTrack_clicked();
+    void on_radioButton_Y_toggled(bool checked);
+    void on_radioButton_X_toggled(bool checked);
+    void on_radioButton_B_toggled(bool checked);
+    void on_radioButton_A_toggled(bool checked);
+    void on_radioButton_Up_toggled(bool checked);
+    void on_radioButton_Left_toggled(bool checked);
+    void on_radioButton_Down_toggled(bool checked);
+    void on_radioButton_Right_toggled(bool checked);
 };
 #endif // MAINWINDOW_H

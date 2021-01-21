@@ -14,6 +14,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QFrame>
+#include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QLCDNumber>
 #include <QtWidgets/QLabel>
@@ -21,6 +22,7 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QProgressBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QRadioButton>
 #include <QtWidgets/QSlider>
@@ -115,6 +117,21 @@ public:
     QFrame *line;
     QFrame *line_2;
     QPushButton *pushButton_StropTrack;
+    QGraphicsView *graphicsViewGamePad;
+    QRadioButton *radioButton_Y;
+    QRadioButton *radioButton_B;
+    QRadioButton *radioButton_A;
+    QRadioButton *radioButton_X;
+    QProgressBar *progressBar_L1;
+    QProgressBar *progressBar_L2;
+    QRadioButton *radioButton_Select;
+    QRadioButton *radioButton_Start;
+    QRadioButton *radioButton_L1;
+    QRadioButton *radioButton_R1;
+    QRadioButton *radioButton_Left;
+    QRadioButton *radioButton_Up;
+    QRadioButton *radioButton_Right;
+    QRadioButton *radioButton_Down;
     QWidget *tab_2;
     QWidget *tab_4;
     QGroupBox *groupBox_6;
@@ -601,6 +618,71 @@ public:
         pushButton_StropTrack = new QPushButton(tab_6);
         pushButton_StropTrack->setObjectName(QString::fromUtf8("pushButton_StropTrack"));
         pushButton_StropTrack->setGeometry(QRect(150, 158, 31, 23));
+        graphicsViewGamePad = new QGraphicsView(tab_6);
+        graphicsViewGamePad->setObjectName(QString::fromUtf8("graphicsViewGamePad"));
+        graphicsViewGamePad->setGeometry(QRect(430, 60, 471, 311));
+        radioButton_Y = new QRadioButton(tab_6);
+        radioButton_Y->setObjectName(QString::fromUtf8("radioButton_Y"));
+        radioButton_Y->setGeometry(QRect(780, 230, 31, 17));
+        radioButton_Y->setChecked(false);
+        radioButton_Y->setAutoExclusive(false);
+        radioButton_B = new QRadioButton(tab_6);
+        radioButton_B->setObjectName(QString::fromUtf8("radioButton_B"));
+        radioButton_B->setEnabled(true);
+        radioButton_B->setGeometry(QRect(830, 280, 31, 17));
+        radioButton_B->setCheckable(true);
+        radioButton_B->setChecked(false);
+        radioButton_B->setAutoExclusive(false);
+        radioButton_A = new QRadioButton(tab_6);
+        radioButton_A->setObjectName(QString::fromUtf8("radioButton_A"));
+        radioButton_A->setGeometry(QRect(780, 330, 31, 17));
+        radioButton_A->setAutoExclusive(false);
+        radioButton_X = new QRadioButton(tab_6);
+        radioButton_X->setObjectName(QString::fromUtf8("radioButton_X"));
+        radioButton_X->setGeometry(QRect(730, 280, 31, 17));
+        radioButton_X->setAutoExclusive(false);
+        progressBar_L1 = new QProgressBar(tab_6);
+        progressBar_L1->setObjectName(QString::fromUtf8("progressBar_L1"));
+        progressBar_L1->setGeometry(QRect(440, 70, 118, 23));
+        progressBar_L1->setValue(0);
+        progressBar_L2 = new QProgressBar(tab_6);
+        progressBar_L2->setObjectName(QString::fromUtf8("progressBar_L2"));
+        progressBar_L2->setGeometry(QRect(780, 70, 118, 23));
+        progressBar_L2->setValue(0);
+        radioButton_Select = new QRadioButton(tab_6);
+        radioButton_Select->setObjectName(QString::fromUtf8("radioButton_Select"));
+        radioButton_Select->setGeometry(QRect(570, 140, 51, 17));
+        radioButton_Select->setChecked(false);
+        radioButton_Select->setAutoExclusive(false);
+        radioButton_Start = new QRadioButton(tab_6);
+        radioButton_Start->setObjectName(QString::fromUtf8("radioButton_Start"));
+        radioButton_Start->setGeometry(QRect(670, 140, 51, 17));
+        radioButton_Start->setChecked(false);
+        radioButton_Start->setAutoExclusive(false);
+        radioButton_L1 = new QRadioButton(tab_6);
+        radioButton_L1->setObjectName(QString::fromUtf8("radioButton_L1"));
+        radioButton_L1->setGeometry(QRect(470, 100, 82, 17));
+        radioButton_L1->setAutoExclusive(false);
+        radioButton_R1 = new QRadioButton(tab_6);
+        radioButton_R1->setObjectName(QString::fromUtf8("radioButton_R1"));
+        radioButton_R1->setGeometry(QRect(810, 100, 82, 17));
+        radioButton_R1->setAutoExclusive(false);
+        radioButton_Left = new QRadioButton(tab_6);
+        radioButton_Left->setObjectName(QString::fromUtf8("radioButton_Left"));
+        radioButton_Left->setGeometry(QRect(460, 280, 41, 17));
+        radioButton_Left->setAutoExclusive(false);
+        radioButton_Up = new QRadioButton(tab_6);
+        radioButton_Up->setObjectName(QString::fromUtf8("radioButton_Up"));
+        radioButton_Up->setGeometry(QRect(510, 230, 41, 17));
+        radioButton_Up->setAutoExclusive(false);
+        radioButton_Right = new QRadioButton(tab_6);
+        radioButton_Right->setObjectName(QString::fromUtf8("radioButton_Right"));
+        radioButton_Right->setGeometry(QRect(560, 280, 51, 17));
+        radioButton_Right->setAutoExclusive(false);
+        radioButton_Down = new QRadioButton(tab_6);
+        radioButton_Down->setObjectName(QString::fromUtf8("radioButton_Down"));
+        radioButton_Down->setGeometry(QRect(510, 330, 61, 17));
+        radioButton_Down->setAutoExclusive(false);
         tabWidget->addTab(tab_6, QString());
         tab_2 = new QWidget();
         tab_2->setObjectName(QString::fromUtf8("tab_2"));
@@ -1231,6 +1313,18 @@ public:
         resetLeftTrackSlider->setText(QCoreApplication::translate("MainWindow", "Stop", nullptr));
         resetRightTrackSlider->setText(QCoreApplication::translate("MainWindow", "Stop", nullptr));
         pushButton_StropTrack->setText(QCoreApplication::translate("MainWindow", "Stop", nullptr));
+        radioButton_Y->setText(QCoreApplication::translate("MainWindow", "Y", nullptr));
+        radioButton_B->setText(QCoreApplication::translate("MainWindow", "B", nullptr));
+        radioButton_A->setText(QCoreApplication::translate("MainWindow", "A", nullptr));
+        radioButton_X->setText(QCoreApplication::translate("MainWindow", "X", nullptr));
+        radioButton_Select->setText(QCoreApplication::translate("MainWindow", "Select", nullptr));
+        radioButton_Start->setText(QCoreApplication::translate("MainWindow", "Start", nullptr));
+        radioButton_L1->setText(QCoreApplication::translate("MainWindow", "L1", nullptr));
+        radioButton_R1->setText(QCoreApplication::translate("MainWindow", "R1", nullptr));
+        radioButton_Left->setText(QCoreApplication::translate("MainWindow", "Left", nullptr));
+        radioButton_Up->setText(QCoreApplication::translate("MainWindow", "Up", nullptr));
+        radioButton_Right->setText(QCoreApplication::translate("MainWindow", "Right", nullptr));
+        radioButton_Down->setText(QCoreApplication::translate("MainWindow", "Down", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_6), QCoreApplication::translate("MainWindow", "Tableau de bord", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("MainWindow", "Run", nullptr));
         groupBox_6->setTitle(QCoreApplication::translate("MainWindow", "Dump", nullptr));
