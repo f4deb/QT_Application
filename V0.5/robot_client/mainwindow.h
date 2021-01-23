@@ -64,6 +64,9 @@ private:
 
     // Gamepad
     void gamepadInit();
+    void padBouttonL2(double value);
+    void padBouttonR2(double value);
+    void padBouttonLeft(double value);
     void radioButtonA(bool status);
     void radioButtonB(bool status);
     void radioButtonX(bool status);
