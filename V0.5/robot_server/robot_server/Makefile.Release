@@ -704,9 +704,12 @@ release\moc_mainwindow.cpp: mainwindow.h \
 		H:\QT\5.15.2\msvc2019_64\include\QtWidgets\QMainWindow \
 		H:\QT\5.15.2\msvc2019_64\include\QtCore\QTimer \
 		H:\QT\5.15.2\msvc2019_64\include\QtCore\QThread \
-		H:\QT\5.15.2\msvc2019_64\include\QtSerialPort\QSerialPort \
-		H:\QT\5.15.2\msvc2019_64\include\QtSerialPort\qserialport.h \
+		H:\QT\5.15.2\msvc2019_64\include\QtSerialPort\QtSerialPort \
+		H:\QT\5.15.2\msvc2019_64\include\QtSerialPort\QtSerialPortDepends \
 		H:\QT\5.15.2\msvc2019_64\include\QtSerialPort\qserialportglobal.h \
+		H:\QT\5.15.2\msvc2019_64\include\QtSerialPort\qserialport.h \
+		H:\QT\5.15.2\msvc2019_64\include\QtSerialPort\qserialportinfo.h \
+		H:\QT\5.15.2\msvc2019_64\include\QtSerialPort\qtserialportversion.h \
 		release\moc_predefs.h \
 		H:\QT\5.15.2\msvc2019_64\bin\moc.exe
 	H:\QT\5.15.2\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include E:/INFORMATIQUE/QT_Application/V0.5/robot_server/robot_server/release/moc_predefs.h -IH:/QT/5.15.2/msvc2019_64/mkspecs/win32-msvc -IE:/INFORMATIQUE/QT_Application/V0.5/robot_server/robot_server -IE:/INFORMATIQUE/QT_Application/V0.5/robot_server/robot_server -IH:/QT/5.15.2/msvc2019_64/include -IH:/QT/5.15.2/msvc2019_64/include/QtWidgets -IH:/QT/5.15.2/msvc2019_64/include/QtGui -IH:/QT/5.15.2/msvc2019_64/include/QtANGLE -IH:/QT/5.15.2/msvc2019_64/include/QtNetwork -IH:/QT/5.15.2/msvc2019_64/include/QtSerialPort -IH:/QT/5.15.2/msvc2019_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt" mainwindow.h -o release\moc_mainwindow.cpp
@@ -1505,11 +1508,15 @@ release\mainwindow.obj: mainwindow.cpp mainwindow.h \
 		H:\QT\5.15.2\msvc2019_64\include\QtWidgets\QMainWindow \
 		H:\QT\5.15.2\msvc2019_64\include\QtCore\QTimer \
 		H:\QT\5.15.2\msvc2019_64\include\QtCore\QThread \
-		H:\QT\5.15.2\msvc2019_64\include\QtSerialPort\QSerialPort \
-		H:\QT\5.15.2\msvc2019_64\include\QtSerialPort\qserialport.h \
+		H:\QT\5.15.2\msvc2019_64\include\QtSerialPort\QtSerialPort \
+		H:\QT\5.15.2\msvc2019_64\include\QtSerialPort\QtSerialPortDepends \
 		H:\QT\5.15.2\msvc2019_64\include\QtSerialPort\qserialportglobal.h \
+		H:\QT\5.15.2\msvc2019_64\include\QtSerialPort\qserialport.h \
+		H:\QT\5.15.2\msvc2019_64\include\QtSerialPort\qserialportinfo.h \
+		H:\QT\5.15.2\msvc2019_64\include\QtSerialPort\qtserialportversion.h \
 		settingsdialog.h \
 		H:\QT\5.15.2\msvc2019_64\include\QtWidgets\QDialog \
+		H:\QT\5.15.2\msvc2019_64\include\QtSerialPort\QSerialPort \
 		H:\QT\5.15.2\msvc2019_64\include\QtWidgets\QMessageBox \
 		H:\QT\5.15.2\msvc2019_64\include\QtWidgets\QLabel
 
@@ -2051,9 +2058,12 @@ release\main.obj: main.cpp H:\QT\5.15.2\msvc2019_64\include\QtWidgets\QApplicati
 		H:\QT\5.15.2\msvc2019_64\include\QtWidgets\QMainWindow \
 		H:\QT\5.15.2\msvc2019_64\include\QtCore\QTimer \
 		H:\QT\5.15.2\msvc2019_64\include\QtCore\QThread \
-		H:\QT\5.15.2\msvc2019_64\include\QtSerialPort\QSerialPort \
+		H:\QT\5.15.2\msvc2019_64\include\QtSerialPort\QtSerialPort \
+		H:\QT\5.15.2\msvc2019_64\include\QtSerialPort\QtSerialPortDepends \
+		H:\QT\5.15.2\msvc2019_64\include\QtSerialPort\qserialportglobal.h \
 		H:\QT\5.15.2\msvc2019_64\include\QtSerialPort\qserialport.h \
-		H:\QT\5.15.2\msvc2019_64\include\QtSerialPort\qserialportglobal.h
+		H:\QT\5.15.2\msvc2019_64\include\QtSerialPort\qserialportinfo.h \
+		H:\QT\5.15.2\msvc2019_64\include\QtSerialPort\qtserialportversion.h
 
 release\settingsdialog.obj: settingsdialog.cpp settingsdialog.h \
 		H:\QT\5.15.2\msvc2019_64\include\QtWidgets\QDialog \
@@ -2201,7 +2211,6 @@ release\settingsdialog.obj: settingsdialog.cpp settingsdialog.h \
 		H:\QT\5.15.2\msvc2019_64\include\QtWidgets\QPushButton \
 		H:\QT\5.15.2\msvc2019_64\include\QtWidgets\qpushbutton.h \
 		H:\QT\5.15.2\msvc2019_64\include\QtWidgets\qabstractbutton.h \
-		H:\QT\5.15.2\msvc2019_64\include\QtWidgets\QSpacerItem \
 		H:\QT\5.15.2\msvc2019_64\include\QtSerialPort\QSerialPortInfo \
 		H:\QT\5.15.2\msvc2019_64\include\QtSerialPort\qserialportinfo.h \
 		H:\QT\5.15.2\msvc2019_64\include\QtGui\QIntValidator \

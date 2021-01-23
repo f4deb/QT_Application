@@ -7,7 +7,7 @@
 #include <QMainWindow>
 #include <QTimer>
 #include <QThread>
-#include <QtSerialPort/QSerialPort>
+#include <QtSerialPort>
 
 QT_BEGIN_NAMESPACE
 

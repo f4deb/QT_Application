@@ -26,7 +26,6 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-
     //Serial Port
     int etat_serial_port;
     QSerialPort *serial;
@@ -67,6 +66,10 @@ private:
     void gamepadInit();
     void padBouttonL2(double value);
     void padBouttonR2(double value);
+<<<<<<< HEAD
+=======
+    void padBouttonLeft(double value);
+>>>>>>> master
     void radioButtonA(bool status);
     void radioButtonB(bool status);
     void radioButtonX(bool status);
@@ -79,11 +82,14 @@ private:
     void radioButtonRight(bool status);
     void radioButtonUp(bool status);
     void radioButtonDown(bool status);
+<<<<<<< HEAD
     void padBouttonLeftX(double value);
     void padBouttonLeftY(double value);
     void padBouttonRightX(double value);
     void padBouttonRightY(double value);
 
+=======
+>>>>>>> master
 
 
 public slots:
@@ -127,5 +133,19 @@ private slots:
     void on_pushButton_clicked();
     void on_pushButtonReset_clicked();
     void on_pushButtonStopMotor_clicked();
+    void on_pushButton_2_clicked();
+    void on_resetLeftTrackSlider_clicked();
+    void on_resetRightTrackSlider_clicked();
+    void on_leftTrackSlider_valueChanged(int value);
+    void on_rightTrackSlider_valueChanged(int value);
+    void on_pushButton_StropTrack_clicked();
+    void on_radioButton_Y_toggled(bool checked);
+    void on_radioButton_X_toggled(bool checked);
+    void on_radioButton_B_toggled(bool checked);
+    void on_radioButton_A_toggled(bool checked);
+    void on_radioButton_Up_toggled(bool checked);
+    void on_radioButton_Left_toggled(bool checked);
+    void on_radioButton_Down_toggled(bool checked);
+    void on_radioButton_Right_toggled(bool checked);
 };
 #endif // MAINWINDOW_H

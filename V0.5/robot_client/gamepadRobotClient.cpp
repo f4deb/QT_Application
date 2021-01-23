@@ -39,6 +39,7 @@ void MainWindow::gamepadInit(){
 
     connect(m_gamepad, &QGamepad::axisLeftXChanged, this, [this](double value){
         qDebug() << "Left X" << value;
+<<<<<<< HEAD
         padBouttonLeftX(value);
     });
     connect(m_gamepad, &QGamepad::axisLeftYChanged, this, [this](double value){
@@ -54,6 +55,21 @@ void MainWindow::gamepadInit(){
         value = -value;
         qDebug() << "Right Y" << value;
         padBouttonRightY(value);
+=======
+        padBouttonLeft(value);
+    });
+    connect(m_gamepad, &QGamepad::axisLeftYChanged, this, [this](double value){
+        qDebug() << "Left Y" << value;
+        padBouttonLeft(value);
+    });
+    connect(m_gamepad, &QGamepad::axisRightXChanged, this, [this](double value){
+        qDebug() << "Right X" << value;
+        padBouttonLeft(value);
+    });
+    connect(m_gamepad, &QGamepad::axisRightYChanged, this, [this](double value){
+        qDebug() << "Right Y" << value;
+        padBouttonLeft(value);
+>>>>>>> master
     });
     connect(m_gamepad, &QGamepad::buttonAChanged, this, [this](bool pressed){
         qDebug() << "Button A" << pressed;
@@ -118,11 +134,16 @@ void MainWindow::gamepadInit(){
 
 void MainWindow::padBouttonL2(double value){
     int valueByte= (value * 100);
+<<<<<<< HEAD
     ui->progressBarLeft->setValue(valueByte);
+=======
+    ui->progressBar_L2->setValue(valueByte);
+>>>>>>> master
 }
 
 void MainWindow::padBouttonR2(double value){
     int valueByte= (value * 100);
+<<<<<<< HEAD
     ui->progressBarRight->setValue(valueByte);
 }
 
@@ -192,4 +213,60 @@ void MainWindow::padBouttonRightX (double value){
 void MainWindow::padBouttonRightY (double value){
     int valueByte= (value * 128);
     ui->verticalSliderRightPad->setValue(valueByte);
+=======
+    ui->progressBar_R2->setValue(valueByte);
+}
+
+void MainWindow::padBouttonLeft(double value){
+    int valueByte= (value * 127);
+    ui->leftTrackSlider->setValue(valueByte);
+}
+
+void MainWindow::radioButtonA(bool status){
+    ui->radioButton_A->setChecked(status);
+}
+
+void MainWindow::radioButtonB(bool status){
+    ui->radioButton_B->setChecked(status);
+}
+
+void MainWindow::radioButtonX(bool status){
+    ui->radioButton_X->setChecked(status);
+}
+
+void MainWindow::radioButtonY(bool status){
+    ui->radioButton_Y->setChecked(status);
+}
+
+void MainWindow::radioButtonL1(bool status){
+    ui->radioButton_L1->setChecked(status);
+}
+
+void MainWindow::radioButtonR1(bool status){
+    ui->radioButton_R1->setChecked(status);
+}
+
+void MainWindow::radioButtonSelect(bool status){
+    ui->radioButton_Select->setChecked(status);
+}
+
+void MainWindow::radioButtonStart(bool status){
+    ui->radioButton_Start->setChecked(status);
+}
+
+void MainWindow::radioButtonLeft(bool status){
+    ui->radioButton_Left->setChecked(status);
+}
+
+void MainWindow::radioButtonRight(bool status){
+    ui->radioButton_Right->setChecked(status);
+}
+
+void MainWindow::radioButtonUp(bool status){
+    ui->radioButton_Up->setChecked(status);
+}
+
+void MainWindow::radioButtonDown(bool status){
+    ui->radioButton_Down->setChecked(status);
+>>>>>>> master
 }

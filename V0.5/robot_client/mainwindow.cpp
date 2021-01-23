@@ -1,19 +1,23 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-#include <QtWidgets>
-#include <QTableWidget>
+#include <QPainter>
 #include <QPushButton>
+#include <QTableWidget>
+#include <QtGamepad>
+#include <QtWidgets>
 #include <QVBoxLayout>
 #include <QWidget>
+#include <QtGamepad/QGamepad>
 
 #include <QtSerialPort/QSerialPortInfo>
 
 #include "./Qt-custom-gauge-widget-master/source/qcgaugewidget.h"
 #include "./qcustomplot/qcustomplot.h"
 
-#include "serial.h"
 #include "console.h"
+#include "gamepadRobotClient.h"
+#include "serial.h"
 #include "transmitAll.h"
 
 extern int etat_serial_port;
@@ -31,6 +35,11 @@ MainWindow::MainWindow(QWidget *parent)
     serialInit();
     serverInit();
     gamepadInit();
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> master
 }
 
 MainWindow::~MainWindow()
@@ -146,4 +155,115 @@ void MainWindow::on_pushButtonReset_clicked()
 void MainWindow::on_pushButtonStopMotor_clicked()
 {
     transmitAll("Mc");
+}
+
+void MainWindow::on_pushButton_2_clicked()
+{
+
+}
+
+void MainWindow::on_resetLeftTrackSlider_clicked()
+{
+    ui->leftTrackSlider->setValue(ui->leftTrackSlider->maximum() -127);
+}
+
+void MainWindow::on_resetRightTrackSlider_clicked()
+{
+    ui->rightTrackSlider->setValue(ui->rightTrackSlider->maximum() -127);
+}
+
+void MainWindow::on_leftTrackSlider_valueChanged(int value)
+{
+    ui->lcdNumberLeftTrackSlider->display(value);
+}
+
+void MainWindow::on_rightTrackSlider_valueChanged(int value)
+{
+    ui->lcdNumberRightTrackSlider->display(value);
+}
+
+void MainWindow::on_pushButton_StropTrack_clicked()
+{
+    ui->leftTrackSlider->setValue(ui->leftTrackSlider->maximum() -127);
+    ui->rightTrackSlider->setValue(ui->rightTrackSlider->maximum() -127);
+}
+
+void MainWindow::on_radioButton_Y_toggled(bool checked)
+{
+    if (checked) {
+        qDebug() << "on_radioButton_Y_toggled" << checked;
+    }
+    else {
+        qDebug() << "on_radioButton_Y_toggled" << checked;
+    }
+}
+
+void MainWindow::on_radioButton_X_toggled(bool checked)
+{
+    if (checked) {
+        qDebug() << "on_radioButton_X_toggled" << checked;
+    }
+    else {
+        qDebug() << "on_radioButton_X_toggled" << checked;
+    }
+}
+
+void MainWindow::on_radioButton_B_toggled(bool checked)
+{
+    if (checked) {
+        qDebug() << "on_radioButton_B_toggled" << checked;
+    }
+    else {
+        qDebug() << "on_radioButton_B_toggled" << checked;
+    }
+}
+
+void MainWindow::on_radioButton_A_toggled(bool checked)
+{
+    if (checked) {
+        qDebug() << "on_radioButton_A_toggled" << checked;
+    }
+    else {
+        qDebug() << "on_radioButton_A_toggled" << checked;
+    }
+}
+
+void MainWindow::on_radioButton_Up_toggled(bool checked)
+{
+    if (checked) {
+        qDebug() << "on_radioButton_Up_toggled" << checked;
+    }
+    else {
+        qDebug() << "on_radioButton_Up_toggled" << checked;
+    }
+}
+
+void MainWindow::on_radioButton_Left_toggled(bool checked)
+{
+    if (checked) {
+        qDebug() << "on_radioButton_Left_toggled" << checked;
+    }
+    else {
+        qDebug() << "on_radioButton_Left_toggled" << checked;
+    }
+}
+
+void MainWindow::on_radioButton_Down_toggled(bool checked)
+{
+    if (checked) {
+        qDebug() << "on_radioButton_Down_toggled" << checked;
+    }
+    else {
+        qDebug() << "on_radioButton_Down_toggled" << checked;
+    }
+}
+
+void MainWindow::on_radioButton_Right_toggled(bool checked)
+{
+    if (checked) {
+        qDebug() << "on_radioButton_Right_toggled" << checked;
+    }
+    else {
+        qDebug() << "on_radioButton_Right_toggled" << checked;
+    }
 }
