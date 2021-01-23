@@ -30,6 +30,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     serialInit();
     serverInit();
+    gamepadInit();
 }
 
 MainWindow::~MainWindow()

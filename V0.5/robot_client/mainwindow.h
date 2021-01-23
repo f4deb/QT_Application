@@ -6,6 +6,11 @@
 #include <QtNetwork>
 #include <QtSerialPort/QSerialPortInfo>
 
+#include <QtGamepad/QGamepad>
+
+#include <QDebug>
+#include <QLoggingCategory>
+
 #include "console.h"
 
 
@@ -35,6 +40,9 @@ private:
     Ui::MainWindow *ui;
 
 private:
+    //GAMEPAD
+    QGamepad *m_gamepad;
+
     //TERMINAL
     Console *m_console = nullptr;
 
@@ -54,6 +62,29 @@ private:
     quint16 tailleMessage;
 
     void transmitAll(QString text);
+
+    // Gamepad
+    void gamepadInit();
+    void padBouttonL2(double value);
+    void padBouttonR2(double value);
+    void radioButtonA(bool status);
+    void radioButtonB(bool status);
+    void radioButtonX(bool status);
+    void radioButtonY(bool status);
+    void radioButtonL1(bool status);
+    void radioButtonR1(bool status);
+    void radioButtonSelect(bool status);
+    void radioButtonStart(bool status);
+    void radioButtonLeft(bool status);
+    void radioButtonRight(bool status);
+    void radioButtonUp(bool status);
+    void radioButtonDown(bool status);
+    void padBouttonLeftX(double value);
+    void padBouttonLeftY(double value);
+    void padBouttonRightX(double value);
+    void padBouttonRightY(double value);
+
+
 
 public slots:
 
