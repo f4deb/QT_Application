@@ -1,4 +1,4 @@
-QT       += core gui widgets network serialport printsupport
+QT       += core gui widgets network serialport printsupport gamepad
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -18,6 +18,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     Telnet.cpp \
     console.cpp \
+    gamepadRobotClient.cpp \
     main.cpp \
     mainwindow.cpp \
     menu.cpp \
@@ -29,6 +30,7 @@ SOURCES += \
 HEADERS += \
     Telnet.h \
     console.h \
+    gamepadRobotClient.h \
     mainwindow.h \
     menu.h \
     serial.h \
