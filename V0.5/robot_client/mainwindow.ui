@@ -245,6 +245,7 @@ background-color: rgb(255, 208, 215);</string>
      </property>
      <property name="font">
       <font>
+       <family>Cantarell</family>
        <pointsize>7</pointsize>
       </font>
      </property>
@@ -266,6 +267,7 @@ background-color: rgb(255, 208, 215);</string>
      </property>
      <property name="font">
       <font>
+       <family>Cantarell</family>
        <pointsize>7</pointsize>
       </font>
      </property>
@@ -287,6 +289,7 @@ background-color: rgb(255, 208, 215);</string>
      </property>
      <property name="font">
       <font>
+       <family>Cantarell</family>
        <pointsize>7</pointsize>
       </font>
      </property>
@@ -305,6 +308,7 @@ background-color: rgb(255, 208, 215);</string>
      </property>
      <property name="font">
       <font>
+       <family>Cantarell</family>
        <pointsize>7</pointsize>
       </font>
      </property>
@@ -323,6 +327,7 @@ background-color: rgb(255, 208, 215);</string>
      </property>
      <property name="font">
       <font>
+       <family>Cantarell</family>
        <pointsize>7</pointsize>
       </font>
      </property>
@@ -341,6 +346,7 @@ background-color: rgb(255, 208, 215);</string>
      </property>
      <property name="font">
       <font>
+       <family>Cantarell</family>
        <pointsize>7</pointsize>
       </font>
      </property>
@@ -596,12 +602,13 @@ background-color: rgb(255, 208, 215);</string>
       <rect>
        <x>10</x>
        <y>60</y>
-       <width>71</width>
+       <width>81</width>
        <height>23</height>
       </rect>
      </property>
      <property name="font">
       <font>
+       <family>Cantarell</family>
        <pointsize>8</pointsize>
       </font>
      </property>
@@ -617,12 +624,13 @@ background-color: rgb(255, 208, 215);</string>
       <rect>
        <x>10</x>
        <y>90</y>
-       <width>71</width>
+       <width>81</width>
        <height>23</height>
       </rect>
      </property>
      <property name="font">
       <font>
+       <family>Cantarell</family>
        <pointsize>8</pointsize>
       </font>
      </property>
@@ -630,7 +638,7 @@ background-color: rgb(255, 208, 215);</string>
       <string notr="true">color: rgb(170, 0, 127);</string>
      </property>
      <property name="text">
-      <string>PushButton</string>
+      <string>GamePad Init</string>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButtonStopMotor">
@@ -638,12 +646,13 @@ background-color: rgb(255, 208, 215);</string>
       <rect>
        <x>10</x>
        <y>30</y>
-       <width>71</width>
+       <width>81</width>
        <height>23</height>
       </rect>
      </property>
      <property name="font">
       <font>
+       <family>Cantarell</family>
        <pointsize>8</pointsize>
       </font>
      </property>
@@ -659,12 +668,13 @@ background-color: rgb(255, 208, 215);</string>
       <rect>
        <x>100</x>
        <y>30</y>
-       <width>71</width>
+       <width>81</width>
        <height>23</height>
       </rect>
      </property>
      <property name="font">
       <font>
+       <family>Cantarell</family>
        <pointsize>8</pointsize>
       </font>
      </property>
@@ -681,12 +691,13 @@ background-color: rgb(255, 208, 215);</string>
       <rect>
        <x>100</x>
        <y>60</y>
-       <width>71</width>
+       <width>81</width>
        <height>23</height>
       </rect>
      </property>
      <property name="font">
       <font>
+       <family>Cantarell</family>
        <pointsize>8</pointsize>
       </font>
      </property>
@@ -702,12 +713,13 @@ background-color: rgb(255, 208, 215);</string>
       <rect>
        <x>100</x>
        <y>90</y>
-       <width>71</width>
+       <width>81</width>
        <height>23</height>
       </rect>
      </property>
      <property name="font">
       <font>
+       <family>Cantarell</family>
        <pointsize>8</pointsize>
       </font>
      </property>
@@ -741,16 +753,19 @@ background-color: rgb(255, 208, 215);</string>
     <property name="geometry">
      <rect>
       <x>190</x>
-      <y>10</y>
+      <y>40</y>
       <width>1131</width>
-      <height>671</height>
+      <height>641</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(233, 255, 233);</string>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
+    </property>
+    <property name="usesScrollButtons">
+     <bool>true</bool>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -875,6 +890,9 @@ background-color: rgb(255, 208, 215);</string>
        </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(211, 212, 255);</string>
+       </property>
+       <property name="text">
+        <string/>
        </property>
       </widget>
       <widget class="QLineEdit" name="Command_Terminal_7">
@@ -1102,7 +1120,7 @@ color: rgb(170, 0, 127);</string>
         <x>250</x>
         <y>20</y>
         <width>851</width>
-        <height>621</height>
+        <height>591</height>
        </rect>
       </property>
       <property name="font">
@@ -1129,14 +1147,14 @@ color: rgb(255, 255, 255);</string>
     </widget>
     <widget class="QWidget" name="tab_6">
      <attribute name="title">
-      <string>Tableau de bord</string>
+      <string>GamePad</string>
      </attribute>
-     <widget class="QSlider" name="leftTrackSlider">
+     <widget class="QSlider" name="VerticalSliderLeft">
       <property name="geometry">
        <rect>
-        <x>90</x>
+        <x>80</x>
         <y>90</y>
-        <width>22</width>
+        <width>41</width>
         <height>160</height>
        </rect>
       </property>
@@ -1152,13 +1170,16 @@ color: rgb(255, 255, 255);</string>
       <property name="orientation">
        <enum>Qt::Vertical</enum>
       </property>
+      <property name="tickPosition">
+       <enum>QSlider::TicksBothSides</enum>
+      </property>
      </widget>
-     <widget class="QSlider" name="rightTrackSlider">
+     <widget class="QSlider" name="VerticalSliderRight">
       <property name="geometry">
        <rect>
-        <x>220</x>
+        <x>291</x>
         <y>90</y>
-        <width>22</width>
+        <width>41</width>
         <height>160</height>
        </rect>
       </property>
@@ -1177,13 +1198,16 @@ color: rgb(255, 255, 255);</string>
       <property name="orientation">
        <enum>Qt::Vertical</enum>
       </property>
+      <property name="tickPosition">
+       <enum>QSlider::TicksBothSides</enum>
+      </property>
      </widget>
      <widget class="QLabel" name="label_Left_Track_Slider">
       <property name="geometry">
        <rect>
-        <x>70</x>
+        <x>50</x>
         <y>30</y>
-        <width>61</width>
+        <width>101</width>
         <height>16</height>
        </rect>
       </property>
@@ -1194,9 +1218,9 @@ color: rgb(255, 255, 255);</string>
      <widget class="QLabel" name="label_Right_Trach_Slider">
       <property name="geometry">
        <rect>
-        <x>200</x>
+        <x>260</x>
         <y>30</y>
-        <width>71</width>
+        <width>101</width>
         <height>16</height>
        </rect>
       </property>
@@ -1216,6 +1240,12 @@ color: rgb(255, 255, 255);</string>
       <property name="midLineWidth">
        <number>2</number>
       </property>
+      <property name="digitCount">
+       <number>5</number>
+      </property>
+      <property name="mode">
+       <enum>QLCDNumber::Dec</enum>
+      </property>
       <property name="intValue" stdset="0">
        <number>0</number>
       </property>
@@ -1223,7 +1253,7 @@ color: rgb(255, 255, 255);</string>
      <widget class="QLCDNumber" name="lcdNumberRightTrackSlider">
       <property name="geometry">
        <rect>
-        <x>200</x>
+        <x>270</x>
         <y>52</y>
         <width>64</width>
         <height>31</height>
@@ -1255,63 +1285,9 @@ color: rgb(255, 255, 255);</string>
      <widget class="QPushButton" name="resetRightTrackSlider">
       <property name="geometry">
        <rect>
-        <x>200</x>
+        <x>270</x>
         <y>260</y>
         <width>75</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Stop</string>
-      </property>
-     </widget>
-     <widget class="Line" name="line">
-      <property name="geometry">
-       <rect>
-        <x>120</x>
-        <y>160</y>
-        <width>31</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Plain</enum>
-      </property>
-      <property name="lineWidth">
-       <number>2</number>
-      </property>
-      <property name="midLineWidth">
-       <number>0</number>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-     </widget>
-     <widget class="Line" name="line_2">
-      <property name="geometry">
-       <rect>
-        <x>180</x>
-        <y>160</y>
-        <width>31</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Plain</enum>
-      </property>
-      <property name="lineWidth">
-       <number>2</number>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_StropTrack">
-      <property name="geometry">
-       <rect>
-        <x>150</x>
-        <y>158</y>
-        <width>31</width>
         <height>23</height>
        </rect>
       </property>
@@ -1405,7 +1381,7 @@ color: rgb(255, 255, 255);</string>
        <bool>false</bool>
       </property>
      </widget>
-     <widget class="QProgressBar" name="progressBar_L1">
+     <widget class="QProgressBar" name="progressBar_L2">
       <property name="geometry">
        <rect>
         <x>440</x>
@@ -1418,7 +1394,7 @@ color: rgb(255, 255, 255);</string>
        <number>0</number>
       </property>
      </widget>
-     <widget class="QProgressBar" name="progressBar_L2">
+     <widget class="QProgressBar" name="progressBar_R2">
       <property name="geometry">
        <rect>
         <x>780</x>
@@ -1436,7 +1412,7 @@ color: rgb(255, 255, 255);</string>
        <rect>
         <x>570</x>
         <y>140</y>
-        <width>51</width>
+        <width>61</width>
         <height>17</height>
        </rect>
       </property>
@@ -1563,6 +1539,87 @@ color: rgb(255, 255, 255);</string>
       </property>
       <property name="autoExclusive">
        <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QSlider" name="horizontalSliderLeft">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>160</y>
+        <width>160</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="minimum">
+       <number>-128</number>
+      </property>
+      <property name="maximum">
+       <number>127</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="invertedAppearance">
+       <bool>false</bool>
+      </property>
+      <property name="invertedControls">
+       <bool>false</bool>
+      </property>
+      <property name="tickPosition">
+       <enum>QSlider::TicksBothSides</enum>
+      </property>
+     </widget>
+     <widget class="QSlider" name="horizontalSliderRight">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>160</y>
+        <width>160</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="minimum">
+       <number>-128</number>
+      </property>
+      <property name="maximum">
+       <number>127</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="tickPosition">
+       <enum>QSlider::TicksBothSides</enum>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonGamePadConnect">
+      <property name="geometry">
+       <rect>
+        <x>970</x>
+        <y>40</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Connect</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_37">
+      <property name="geometry">
+       <rect>
+        <x>980</x>
+        <y>20</y>
+        <width>61</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>GamePad</string>
       </property>
      </widget>
     </widget>
@@ -3022,6 +3079,16 @@ color: rgb(255, 255, 255);</string>
      <attribute name="title">
       <string>LCD</string>
      </attribute>
+     <widget class="QGraphicsView" name="graphicsView">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>20</y>
+        <width>256</width>
+        <height>192</height>
+       </rect>
+      </property>
+     </widget>
     </widget>
    </widget>
    <widget class="QGroupBox" name="groupBox_9">
@@ -3066,6 +3133,7 @@ color: rgb(255, 255, 255);</string>
      </property>
      <property name="font">
       <font>
+       <family>Cantarell</family>
        <pointsize>7</pointsize>
       </font>
      </property>
@@ -3116,6 +3184,7 @@ color: rgb(255, 255, 255);</string>
      </property>
      <property name="font">
       <font>
+       <family>Cantarell</family>
        <pointsize>7</pointsize>
       </font>
      </property>
@@ -3175,6 +3244,7 @@ color: rgb(255, 255, 255);</string>
      </property>
      <property name="font">
       <font>
+       <family>Cantarell</family>
        <pointsize>7</pointsize>
       </font>
      </property>
@@ -3196,6 +3266,7 @@ color: rgb(255, 255, 255);</string>
      </property>
      <property name="font">
       <font>
+       <family>Cantarell</family>
        <pointsize>7</pointsize>
       </font>
      </property>
@@ -3252,6 +3323,7 @@ color: rgb(255, 255, 255);</string>
      </property>
      <property name="font">
       <font>
+       <family>Cantarell</family>
        <pointsize>7</pointsize>
       </font>
      </property>
@@ -3270,6 +3342,7 @@ color: rgb(255, 255, 255);</string>
      </property>
      <property name="font">
       <font>
+       <family>Cantarell</family>
        <pointsize>7</pointsize>
       </font>
      </property>
@@ -3712,6 +3785,76 @@ background-color: rgb(255, 208, 215);</string>
      </property>
     </widget>
    </widget>
+   <widget class="QGroupBox" name="groupBoxStatus">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>0</y>
+      <width>1131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Status</string>
+    </property>
+    <widget class="QRadioButton" name="radioButtonTelnet">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>51</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Telnet</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+     <property name="autoRepeat">
+      <bool>false</bool>
+     </property>
+     <property name="autoExclusive">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButtonGamepad">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>20</y>
+       <width>71</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>GamePad</string>
+     </property>
+     <property name="autoExclusive">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButtonRobot">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>20</y>
+       <width>51</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Robot</string>
+     </property>
+     <property name="autoExclusive">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -3719,7 +3862,7 @@ background-color: rgb(255, 208, 215);</string>
      <x>0</x>
      <y>0</y>
      <width>1400</width>
-     <height>24</height>
+     <height>20</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFichier">

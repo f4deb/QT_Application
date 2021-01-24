@@ -64,6 +64,7 @@ void MainWindow::connecte()
     statusBar()->showMessage("Connexion réussie");
     ui->Telnet_Connect->setText("Disconnect");
     ui->Telnet_Connect->setEnabled(true);
+    ui->radioButtonTelnet->setChecked(true);
 }
 
 // Ce slot est appelé lorsqu'on est déconnecté du serveur
@@ -73,6 +74,8 @@ void MainWindow::deconnecte()
     statusBar()->showMessage("Déconnecté du serveur");
     ui->Telnet_Connect->setText("Connect");
     ui->Telnet_Connect->setEnabled(true);
+    ui->radioButtonTelnet->setChecked(false);
+
 }
 
 // Ce slot est appelé lorsqu'il y a une erreur

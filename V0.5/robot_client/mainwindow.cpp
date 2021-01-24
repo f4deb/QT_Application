@@ -34,7 +34,10 @@ MainWindow::MainWindow(QWidget *parent)
 
     serialInit();
     serverInit();
-    gamepadInit();
+
+
+
+
 
 
 }
@@ -161,12 +164,12 @@ void MainWindow::on_pushButton_2_clicked()
 
 void MainWindow::on_resetLeftTrackSlider_clicked()
 {
-    ui->leftTrackSlider->setValue(ui->leftTrackSlider->maximum() -127);
+    ui->VerticalSliderLeft->setValue(ui->VerticalSliderLeft->maximum() -127);
 }
 
 void MainWindow::on_resetRightTrackSlider_clicked()
 {
-    ui->rightTrackSlider->setValue(ui->rightTrackSlider->maximum() -127);
+    ui->VerticalSliderLeft->setValue(ui->VerticalSliderLeft->maximum() -127);
 }
 
 void MainWindow::on_leftTrackSlider_valueChanged(int value)
@@ -181,8 +184,8 @@ void MainWindow::on_rightTrackSlider_valueChanged(int value)
 
 void MainWindow::on_pushButton_StropTrack_clicked()
 {
-    ui->leftTrackSlider->setValue(ui->leftTrackSlider->maximum() -127);
-    ui->rightTrackSlider->setValue(ui->rightTrackSlider->maximum() -127);
+    ui->VerticalSliderLeft->setValue(ui->VerticalSliderLeft->maximum() -127);
+    ui->VerticalSliderRight->setValue(ui->VerticalSliderRight->maximum() -127);
 }
 
 void MainWindow::on_radioButton_Y_toggled(bool checked)
@@ -263,4 +266,31 @@ void MainWindow::on_radioButton_Right_toggled(bool checked)
     else {
         qDebug() << "on_radioButton_Right_toggled" << checked;
     }
+}
+
+void MainWindow::on_pushButton_5_clicked()
+{
+    qDebug() << "on_pushButton_5_clicked";
+}
+
+void MainWindow::on_pushButtonGamePadConnect_clicked()
+{
+
+    int result = gamepadInit();
+    if (result == 0){
+        ui->pushButtonGamePadConnect->setText("DisConnect");
+    }
+    else {
+        ui->pushButtonGamePadConnect->setText("Connect");
+    }
+}
+
+void MainWindow::on_VerticalSliderLeft_valueChanged(int value)
+{
+    ui->lcdNumberLeftTrackSlider->display(value);
+}
+
+void MainWindow::on_VerticalSliderRight_valueChanged(int value)
+{
+    ui->lcdNumberRightTrackSlider->display(value);
 }

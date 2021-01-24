@@ -1396,7 +1396,6 @@ debug/Telnet.o: Telnet.cpp H:/QT/5.15.2/mingw81_32/include/QtCore/QDebug \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QAction \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QApplication \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QComboBox \
-		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QFrame \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QGraphicsView \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QGroupBox \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QLCDNumber \
@@ -1404,6 +1403,7 @@ debug/Telnet.o: Telnet.cpp H:/QT/5.15.2/mingw81_32/include/QtCore/QDebug \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QLineEdit \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QMenu \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QMenuBar \
+		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QProgressBar \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QPushButton \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QRadioButton \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QSlider \
@@ -1607,40 +1607,45 @@ debug/gamepadRobotClient.o: gamepadRobotClient.cpp H:/QT/5.15.2/mingw81_32/inclu
 		H:/QT/5.15.2/mingw81_32/include/QtCore/qcontiguouscache.h \
 		H:/QT/5.15.2/mingw81_32/include/QtCore/qsharedpointer.h \
 		H:/QT/5.15.2/mingw81_32/include/QtCore/qsharedpointer_impl.h \
-		mainwindow.h \
-		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QMainWindow \
-		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qmainwindow.h \
-		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qtwidgetsglobal.h \
+		H:/QT/5.15.2/mingw81_32/include/QtGui/QPainter \
+		H:/QT/5.15.2/mingw81_32/include/QtGui/qpainter.h \
 		H:/QT/5.15.2/mingw81_32/include/QtGui/qtguiglobal.h \
 		H:/QT/5.15.2/mingw81_32/include/QtGui/qtgui-config.h \
-		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qtwidgets-config.h \
-		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qwidget.h \
+		H:/QT/5.15.2/mingw81_32/include/QtCore/qrect.h \
+		H:/QT/5.15.2/mingw81_32/include/QtCore/qmargins.h \
+		H:/QT/5.15.2/mingw81_32/include/QtCore/qsize.h \
+		H:/QT/5.15.2/mingw81_32/include/QtGui/qpixmap.h \
+		H:/QT/5.15.2/mingw81_32/include/QtGui/qpaintdevice.h \
 		H:/QT/5.15.2/mingw81_32/include/QtGui/qwindowdefs.h \
 		H:/QT/5.15.2/mingw81_32/include/QtGui/qwindowdefs_win.h \
-		H:/QT/5.15.2/mingw81_32/include/QtCore/qmargins.h \
-		H:/QT/5.15.2/mingw81_32/include/QtGui/qpaintdevice.h \
-		H:/QT/5.15.2/mingw81_32/include/QtCore/qrect.h \
-		H:/QT/5.15.2/mingw81_32/include/QtCore/qsize.h \
-		H:/QT/5.15.2/mingw81_32/include/QtGui/qpalette.h \
 		H:/QT/5.15.2/mingw81_32/include/QtGui/qcolor.h \
 		H:/QT/5.15.2/mingw81_32/include/QtGui/qrgb.h \
 		H:/QT/5.15.2/mingw81_32/include/QtGui/qrgba64.h \
-		H:/QT/5.15.2/mingw81_32/include/QtGui/qbrush.h \
+		H:/QT/5.15.2/mingw81_32/include/QtGui/qimage.h \
+		H:/QT/5.15.2/mingw81_32/include/QtGui/qpixelformat.h \
+		H:/QT/5.15.2/mingw81_32/include/QtGui/qtransform.h \
 		H:/QT/5.15.2/mingw81_32/include/QtGui/qmatrix.h \
 		H:/QT/5.15.2/mingw81_32/include/QtGui/qpolygon.h \
 		H:/QT/5.15.2/mingw81_32/include/QtGui/qregion.h \
 		H:/QT/5.15.2/mingw81_32/include/QtCore/qdatastream.h \
 		H:/QT/5.15.2/mingw81_32/include/QtCore/qline.h \
-		H:/QT/5.15.2/mingw81_32/include/QtGui/qtransform.h \
-		H:/QT/5.15.2/mingw81_32/include/QtGui/qimage.h \
-		H:/QT/5.15.2/mingw81_32/include/QtGui/qpixelformat.h \
-		H:/QT/5.15.2/mingw81_32/include/QtGui/qpixmap.h \
+		H:/QT/5.15.2/mingw81_32/include/QtGui/qtextoption.h \
+		H:/QT/5.15.2/mingw81_32/include/QtGui/qpen.h \
+		H:/QT/5.15.2/mingw81_32/include/QtGui/qbrush.h \
+		H:/QT/5.15.2/mingw81_32/include/QtGui/qfontinfo.h \
 		H:/QT/5.15.2/mingw81_32/include/QtGui/qfont.h \
 		H:/QT/5.15.2/mingw81_32/include/QtGui/qfontmetrics.h \
-		H:/QT/5.15.2/mingw81_32/include/QtGui/qfontinfo.h \
+		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QPushButton \
+		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qpushbutton.h \
+		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qtwidgetsglobal.h \
+		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qtwidgets-config.h \
+		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qabstractbutton.h \
+		H:/QT/5.15.2/mingw81_32/include/QtGui/qicon.h \
+		H:/QT/5.15.2/mingw81_32/include/QtGui/qkeysequence.h \
+		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qwidget.h \
+		H:/QT/5.15.2/mingw81_32/include/QtGui/qpalette.h \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qsizepolicy.h \
 		H:/QT/5.15.2/mingw81_32/include/QtGui/qcursor.h \
-		H:/QT/5.15.2/mingw81_32/include/QtGui/qkeysequence.h \
 		H:/QT/5.15.2/mingw81_32/include/QtGui/qevent.h \
 		H:/QT/5.15.2/mingw81_32/include/QtCore/qurl.h \
 		H:/QT/5.15.2/mingw81_32/include/QtCore/qurlquery.h \
@@ -1648,16 +1653,32 @@ debug/gamepadRobotClient.o: gamepadRobotClient.cpp H:/QT/5.15.2/mingw81_32/inclu
 		H:/QT/5.15.2/mingw81_32/include/QtCore/qfiledevice.h \
 		H:/QT/5.15.2/mingw81_32/include/QtGui/qvector2d.h \
 		H:/QT/5.15.2/mingw81_32/include/QtGui/qtouchdevice.h \
+		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QTableWidget \
+		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qtablewidget.h \
+		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qtableview.h \
+		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qabstractitemview.h \
+		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qabstractscrollarea.h \
+		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qframe.h \
+		H:/QT/5.15.2/mingw81_32/include/QtCore/qabstractitemmodel.h \
+		H:/QT/5.15.2/mingw81_32/include/QtCore/qitemselectionmodel.h \
+		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qabstractitemdelegate.h \
+		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qstyleoption.h \
+		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qabstractspinbox.h \
+		H:/QT/5.15.2/mingw81_32/include/QtGui/qvalidator.h \
+		H:/QT/5.15.2/mingw81_32/include/QtCore/qregularexpression.h \
+		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qslider.h \
+		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qabstractslider.h \
+		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qstyle.h \
+		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qtabbar.h \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qtabwidget.h \
-		H:/QT/5.15.2/mingw81_32/include/QtGui/qicon.h \
-		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QtWidgets \
-		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QtWidgetsDepends \
+		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qrubberband.h \
+		H:/QT/5.15.2/mingw81_32/include/QtGamepad/QtGamepad \
+		H:/QT/5.15.2/mingw81_32/include/QtGamepad/QtGamepadDepends \
 		H:/QT/5.15.2/mingw81_32/include/QtCore/QtCore \
 		H:/QT/5.15.2/mingw81_32/include/QtCore/QtCoreDepends \
 		H:/QT/5.15.2/mingw81_32/include/QtCore/qabstractanimation.h \
 		H:/QT/5.15.2/mingw81_32/include/QtCore/qabstracteventdispatcher.h \
 		H:/QT/5.15.2/mingw81_32/include/QtCore/qeventloop.h \
-		H:/QT/5.15.2/mingw81_32/include/QtCore/qabstractitemmodel.h \
 		H:/QT/5.15.2/mingw81_32/include/QtCore/qabstractnativeeventfilter.h \
 		H:/QT/5.15.2/mingw81_32/include/QtCore/qabstractproxymodel.h \
 		H:/QT/5.15.2/mingw81_32/include/QtCore/qabstractstate.h \
@@ -1675,7 +1696,6 @@ debug/gamepadRobotClient.o: gamepadRobotClient.cpp H:/QT/5.15.2/mingw81_32/inclu
 		H:/QT/5.15.2/mingw81_32/include/QtCore/qcborvalue.h \
 		H:/QT/5.15.2/mingw81_32/include/QtCore/qdatetime.h \
 		H:/QT/5.15.2/mingw81_32/include/QtCore/qcborcommon.h \
-		H:/QT/5.15.2/mingw81_32/include/QtCore/qregularexpression.h \
 		H:/QT/5.15.2/mingw81_32/include/QtCore/quuid.h \
 		H:/QT/5.15.2/mingw81_32/include/QtCore/qcbormap.h \
 		H:/QT/5.15.2/mingw81_32/include/QtCore/qcborstream.h \
@@ -1712,7 +1732,6 @@ debug/gamepadRobotClient.o: gamepadRobotClient.cpp H:/QT/5.15.2/mingw81_32/inclu
 		H:/QT/5.15.2/mingw81_32/include/QtCore/qhistorystate.h \
 		H:/QT/5.15.2/mingw81_32/include/QtCore/qidentityproxymodel.h \
 		H:/QT/5.15.2/mingw81_32/include/QtCore/qisenum.h \
-		H:/QT/5.15.2/mingw81_32/include/QtCore/qitemselectionmodel.h \
 		H:/QT/5.15.2/mingw81_32/include/QtCore/qjsonarray.h \
 		H:/QT/5.15.2/mingw81_32/include/QtCore/qjsonvalue.h \
 		H:/QT/5.15.2/mingw81_32/include/QtCore/qjsondocument.h \
@@ -1784,8 +1803,6 @@ debug/gamepadRobotClient.o: gamepadRobotClient.cpp H:/QT/5.15.2/mingw81_32/inclu
 		H:/QT/5.15.2/mingw81_32/include/QtGui/qabstracttextdocumentlayout.h \
 		H:/QT/5.15.2/mingw81_32/include/QtGui/qtextlayout.h \
 		H:/QT/5.15.2/mingw81_32/include/QtGui/qtextformat.h \
-		H:/QT/5.15.2/mingw81_32/include/QtGui/qpen.h \
-		H:/QT/5.15.2/mingw81_32/include/QtGui/qtextoption.h \
 		H:/QT/5.15.2/mingw81_32/include/QtGui/qglyphrun.h \
 		H:/QT/5.15.2/mingw81_32/include/QtGui/qrawfont.h \
 		H:/QT/5.15.2/mingw81_32/include/QtGui/qfontdatabase.h \
@@ -1863,7 +1880,6 @@ debug/gamepadRobotClient.o: gamepadRobotClient.cpp H:/QT/5.15.2/mingw81_32/inclu
 		H:/QT/5.15.2/mingw81_32/include/QtGui/qpagelayout.h \
 		H:/QT/5.15.2/mingw81_32/include/QtGui/qpagesize.h \
 		H:/QT/5.15.2/mingw81_32/include/QtGui/qpaintengine.h \
-		H:/QT/5.15.2/mingw81_32/include/QtGui/qpainter.h \
 		H:/QT/5.15.2/mingw81_32/include/QtGui/qpainterpath.h \
 		H:/QT/5.15.2/mingw81_32/include/QtGui/qpdfwriter.h \
 		H:/QT/5.15.2/mingw81_32/include/QtGui/qpicture.h \
@@ -1885,20 +1901,16 @@ debug/gamepadRobotClient.o: gamepadRobotClient.cpp H:/QT/5.15.2/mingw81_32/inclu
 		H:/QT/5.15.2/mingw81_32/include/QtGui/qtextdocumentwriter.h \
 		H:/QT/5.15.2/mingw81_32/include/QtGui/qtextlist.h \
 		H:/QT/5.15.2/mingw81_32/include/QtGui/qtexttable.h \
-		H:/QT/5.15.2/mingw81_32/include/QtGui/qvalidator.h \
 		H:/QT/5.15.2/mingw81_32/include/QtGui/qtguiversion.h \
-		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qabstractbutton.h \
-		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qabstractitemdelegate.h \
-		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qstyleoption.h \
-		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qabstractspinbox.h \
-		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qslider.h \
-		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qabstractslider.h \
-		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qstyle.h \
-		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qtabbar.h \
-		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qrubberband.h \
-		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qframe.h \
-		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qabstractitemview.h \
-		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qabstractscrollarea.h \
+		H:/QT/5.15.2/mingw81_32/include/QtGamepad/qtgamepadglobal.h \
+		H:/QT/5.15.2/mingw81_32/include/QtGamepad/qgamepad.h \
+		H:/QT/5.15.2/mingw81_32/include/QtGamepad/QGamepadManager \
+		H:/QT/5.15.2/mingw81_32/include/QtGamepad/qgamepadmanager.h \
+		H:/QT/5.15.2/mingw81_32/include/QtCore/QMap \
+		H:/QT/5.15.2/mingw81_32/include/QtGamepad/qgamepadkeynavigation.h \
+		H:/QT/5.15.2/mingw81_32/include/QtGamepad/qtgamepadversion.h \
+		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QtWidgets \
+		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QtWidgetsDepends \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qaccessiblewidget.h \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qaction.h \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qactiongroup.h \
@@ -1917,7 +1929,6 @@ debug/gamepadRobotClient.o: gamepadRobotClient.cpp H:/QT/5.15.2/mingw81_32/inclu
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qcolumnview.h \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qcombobox.h \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qcommandlinkbutton.h \
-		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qpushbutton.h \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qcommonstyle.h \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qcompleter.h \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qdatawidgetmapper.h \
@@ -1966,6 +1977,7 @@ debug/gamepadRobotClient.o: gamepadRobotClient.cpp H:/QT/5.15.2/mingw81_32/inclu
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qlcdnumber.h \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qlistview.h \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qlistwidget.h \
+		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qmainwindow.h \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qmdiarea.h \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qmdisubwindow.h \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qmenu.h \
@@ -2001,8 +2013,6 @@ debug/gamepadRobotClient.o: gamepadRobotClient.cpp H:/QT/5.15.2/mingw81_32/inclu
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qstylepainter.h \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qstyleplugin.h \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qsystemtrayicon.h \
-		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qtableview.h \
-		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qtablewidget.h \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qtextbrowser.h \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qtoolbar.h \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qtoolbox.h \
@@ -2018,6 +2028,10 @@ debug/gamepadRobotClient.o: gamepadRobotClient.cpp H:/QT/5.15.2/mingw81_32/inclu
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qwidgetaction.h \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qwizard.h \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/qtwidgetsversion.h \
+		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QVBoxLayout \
+		H:/QT/5.15.2/mingw81_32/include/QtGamepad/QGamepad \
+		mainwindow.h \
+		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QMainWindow \
 		H:/QT/5.15.2/mingw81_32/include/QtNetwork/QtNetwork \
 		H:/QT/5.15.2/mingw81_32/include/QtNetwork/QtNetworkDepends \
 		H:/QT/5.15.2/mingw81_32/include/QtNetwork/qtnetworkglobal.h \
@@ -2080,12 +2094,6 @@ debug/gamepadRobotClient.o: gamepadRobotClient.cpp H:/QT/5.15.2/mingw81_32/inclu
 		H:/QT/5.15.2/mingw81_32/include/QtSerialPort/QSerialPortInfo \
 		H:/QT/5.15.2/mingw81_32/include/QtSerialPort/qserialportinfo.h \
 		H:/QT/5.15.2/mingw81_32/include/QtSerialPort/qserialportglobal.h \
-		H:/QT/5.15.2/mingw81_32/include/QtGamepad/QGamepad \
-		H:/QT/5.15.2/mingw81_32/include/QtGamepad/qgamepad.h \
-		H:/QT/5.15.2/mingw81_32/include/QtGamepad/qtgamepadglobal.h \
-		H:/QT/5.15.2/mingw81_32/include/QtGamepad/QGamepadManager \
-		H:/QT/5.15.2/mingw81_32/include/QtGamepad/qgamepadmanager.h \
-		H:/QT/5.15.2/mingw81_32/include/QtCore/QMap \
 		H:/QT/5.15.2/mingw81_32/include/QtCore/QLoggingCategory \
 		console.h \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QPlainTextEdit \
@@ -2098,7 +2106,6 @@ debug/gamepadRobotClient.o: gamepadRobotClient.cpp H:/QT/5.15.2/mingw81_32/inclu
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QAction \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QApplication \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QComboBox \
-		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QFrame \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QGraphicsView \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QGroupBox \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QLCDNumber \
@@ -2106,7 +2113,7 @@ debug/gamepadRobotClient.o: gamepadRobotClient.cpp H:/QT/5.15.2/mingw81_32/inclu
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QLineEdit \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QMenu \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QMenuBar \
-		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QPushButton \
+		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QProgressBar \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QRadioButton \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QSlider \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QSpinBox \
@@ -3225,7 +3232,6 @@ debug/mainwindow.o: mainwindow.cpp mainwindow.h \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QAction \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QApplication \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QComboBox \
-		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QFrame \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QGraphicsView \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QGroupBox \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QLCDNumber \
@@ -3233,6 +3239,7 @@ debug/mainwindow.o: mainwindow.cpp mainwindow.h \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QLineEdit \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QMenu \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QMenuBar \
+		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QProgressBar \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QPushButton \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QRadioButton \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QSlider \
@@ -4402,7 +4409,6 @@ debug/serial.o: serial.cpp H:/QT/5.15.2/mingw81_32/include/QtWidgets/QScrollBar 
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QAction \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QApplication \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QComboBox \
-		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QFrame \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QGraphicsView \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QGroupBox \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QLCDNumber \
@@ -4410,6 +4416,7 @@ debug/serial.o: serial.cpp H:/QT/5.15.2/mingw81_32/include/QtWidgets/QScrollBar 
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QLineEdit \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QMenu \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QMenuBar \
+		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QProgressBar \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QPushButton \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QRadioButton \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QSlider \
@@ -4975,7 +4982,6 @@ debug/transmitAll.o: transmitAll.cpp transmitAll.h \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QAction \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QApplication \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QComboBox \
-		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QFrame \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QGraphicsView \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QGroupBox \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QLCDNumber \
@@ -4983,6 +4989,7 @@ debug/transmitAll.o: transmitAll.cpp transmitAll.h \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QLineEdit \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QMenu \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QMenuBar \
+		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QProgressBar \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QPushButton \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QRadioButton \
 		H:/QT/5.15.2/mingw81_32/include/QtWidgets/QSlider \

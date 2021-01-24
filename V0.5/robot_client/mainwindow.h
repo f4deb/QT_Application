@@ -63,7 +63,14 @@ private:
     void transmitAll(QString text);
 
     // Gamepad
-    void gamepadInit();
+    int gamepadInit();
+    const QList<int> gamepadStatus();
+    void padBouttonL2(double value);
+    void padBouttonR2(double value);
+    void padBouttonHorizontalLeft(double value);
+    void padBouttonVerticalLeft(double value);
+    void padBouttonHorizontalRight(double value);
+    void padBouttonVerticalRight(double value);
     void radioButtonA(bool status);
     void radioButtonB(bool status);
     void radioButtonX(bool status);
@@ -133,5 +140,9 @@ private slots:
     void on_radioButton_Left_toggled(bool checked);
     void on_radioButton_Down_toggled(bool checked);
     void on_radioButton_Right_toggled(bool checked);
+    void on_pushButton_5_clicked();
+    void on_pushButtonGamePadConnect_clicked();
+    void on_VerticalSliderLeft_valueChanged(int value);
+    void on_VerticalSliderRight_valueChanged(int value);
 };
 #endif // MAINWINDOW_H

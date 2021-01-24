@@ -13,8 +13,11 @@
 #include "gamepadRobotClient.h"
 #include "ui_mainwindow.h"
 
+const QList<int> MainWindow::gamepadStatus(){
+    qDebug() << m_gamepad->deviceId();
+}
 
-void MainWindow::gamepadInit(){
+int MainWindow::gamepadInit(){
     QLoggingCategory::setFilterRules(QStringLiteral("qt.gamepad.debug=true"));
     QGamepadManager* gamepad_manager = QGamepadManager::instance();
     auto gamepads = QGamepadManager::instance()->connectedGamepads();
@@ -32,22 +35,26 @@ void MainWindow::gamepadInit(){
 
     if (gamepads.isEmpty()) {
         qDebug() << "Did not find any connected gamepad";
-        return;
+        return -1;
     }
 
     m_gamepad = new QGamepad(*gamepads.begin(), this);
 
     connect(m_gamepad, &QGamepad::axisLeftXChanged, this, [this](double value){
         qDebug() << "Left X" << value;
+        padBouttonHorizontalLeft(value);
     });
     connect(m_gamepad, &QGamepad::axisLeftYChanged, this, [this](double value){
         qDebug() << "Left Y" << value;
+        padBouttonVerticalLeft(value);
     });
     connect(m_gamepad, &QGamepad::axisRightXChanged, this, [this](double value){
         qDebug() << "Right X" << value;
+        padBouttonHorizontalRight(value);
     });
     connect(m_gamepad, &QGamepad::axisRightYChanged, this, [this](double value){
         qDebug() << "Right Y" << value;
+        padBouttonVerticalRight(value);
     });
     connect(m_gamepad, &QGamepad::buttonAChanged, this, [this](bool pressed){
         qDebug() << "Button A" << pressed;
@@ -75,9 +82,11 @@ void MainWindow::gamepadInit(){
     });
     connect(m_gamepad, &QGamepad::buttonL2Changed, this, [this](double value){
         qDebug() << "Button L2: " << value;
+        padBouttonL2(value);
     });
     connect(m_gamepad, &QGamepad::buttonR2Changed, this, [this](double value){
         qDebug() << "Button R2: " << value;
+        padBouttonR2(value);
     });
     connect(m_gamepad, &QGamepad::buttonSelectChanged, this, [this](bool pressed){
         qDebug() << "Button Select" << pressed;
@@ -106,10 +115,39 @@ void MainWindow::gamepadInit(){
         qDebug() << "Button Down" << pressed;
         radioButtonDown(pressed);
     });
-
-
+    qDebug() << m_gamepad->isConnected();
+    return 0;
 }
 
+void MainWindow::padBouttonL2(double value){
+    int valueByte= (value * 100);
+    ui->progressBar_L2->setValue(valueByte);
+}
+
+void MainWindow::padBouttonR2(double value){
+    int valueByte= (value * 100);
+    ui->progressBar_R2->setValue(valueByte);
+}
+
+void MainWindow::padBouttonVerticalLeft(double value){
+    int valueByte= -(value * 128) ;
+    ui->VerticalSliderLeft->setValue(valueByte);
+}
+
+void MainWindow::padBouttonHorizontalLeft(double value){
+    int valueByte= (value * 128);
+    ui->horizontalSliderLeft->setValue(valueByte);
+}
+
+void MainWindow::padBouttonVerticalRight(double value){
+    int valueByte= -(value * 128) ;
+    ui->VerticalSliderRight->setValue(valueByte);
+}
+
+void MainWindow::padBouttonHorizontalRight(double value){
+    int valueByte= (value * 128);
+    ui->horizontalSliderRight->setValue(valueByte);
+}
 
 void MainWindow::radioButtonA(bool status){
     ui->radioButton_A->setChecked(status);
