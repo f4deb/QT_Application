@@ -23,6 +23,7 @@
 extern int etat_serial_port;
 extern int etat_serveur_port;
 
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent),
       ui(new Ui::MainWindow),
@@ -34,11 +35,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     serialInit();
     serverInit();
-
-
-
-
-
+    etat_gamepad = 0;
 
 }
 
@@ -278,10 +275,14 @@ void MainWindow::on_pushButtonGamePadConnect_clicked()
 
     int result = gamepadInit();
     if (result == 0){
-        ui->pushButtonGamePadConnect->setText("DisConnect");
+        ui->pushButtonGamePadConnect->setText("Connect");
+        ui->pushButtonGamePadConnect->setStyleSheet("background-color: rgb(255, 208, 215);border:none;color: rgb(170, 85, 127);");
+        ui->radioButtonGamepad->setChecked(false);
     }
     else {
-        ui->pushButtonGamePadConnect->setText("Connect");
+        ui->pushButtonGamePadConnect->setStyleSheet("background-color: rgb(187, 255, 206);border:none;color: rgb(255, 0, 0);");
+        ui->pushButtonGamePadConnect->setText("Disconnect");
+        ui->radioButtonGamepad->setChecked(true);
     }
 }
 
@@ -293,4 +294,12 @@ void MainWindow::on_VerticalSliderLeft_valueChanged(int value)
 void MainWindow::on_VerticalSliderRight_valueChanged(int value)
 {
     ui->lcdNumberRightTrackSlider->display(value);
+}
+
+void MainWindow::on_pushButtonGamePadConnect_clicked(bool checked)
+{
+}
+
+void MainWindow::on_pushButtonGamePadConnect_toggled(bool checked)
+{
 }

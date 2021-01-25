@@ -34,6 +34,7 @@ public:
 
     //Server
     int etat_serveur_port;
+    int etat_gamepad;
 
 private:
     Ui::MainWindow *ui;
@@ -65,6 +66,7 @@ private:
     // Gamepad
     int gamepadInit();
     const QList<int> gamepadStatus();
+    void gamepadClose(void);
     void padBouttonL2(double value);
     void padBouttonR2(double value);
     void padBouttonHorizontalLeft(double value);
@@ -144,5 +146,7 @@ private slots:
     void on_pushButtonGamePadConnect_clicked();
     void on_VerticalSliderLeft_valueChanged(int value);
     void on_VerticalSliderRight_valueChanged(int value);
+    void on_pushButtonGamePadConnect_clicked(bool checked);
+    void on_pushButtonGamePadConnect_toggled(bool checked);
 };
 #endif // MAINWINDOW_H
