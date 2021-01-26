@@ -272,7 +272,6 @@ void MainWindow::on_pushButton_5_clicked()
 
 void MainWindow::on_pushButtonGamePadConnect_clicked()
 {
-
     int result = gamepadInit();
     if (result == 0){
         ui->pushButtonGamePadConnect->setText("Connect");
@@ -302,4 +301,25 @@ void MainWindow::on_pushButtonGamePadConnect_clicked(bool checked)
 
 void MainWindow::on_pushButtonGamePadConnect_toggled(bool checked)
 {
+}
+
+void MainWindow::on_radioButtonGamepad_toggled(bool checked)
+{
+
+
+}
+
+void MainWindow::on_radioButtonGamepad_clicked()
+{
+    int result = gamepadInit();
+    if (result == 0){
+        ui->pushButtonGamePadConnect->setText("Connect");
+        ui->pushButtonGamePadConnect->setStyleSheet("background-color: rgb(255, 208, 215);border:none;color: rgb(170, 85, 127);");
+        ui->radioButtonGamepad->setChecked(false);
+    }
+    else {
+        ui->pushButtonGamePadConnect->setStyleSheet("background-color: rgb(187, 255, 206);border:none;color: rgb(255, 0, 0);");
+        ui->pushButtonGamePadConnect->setText("Disconnect");
+        ui->radioButtonGamepad->setChecked(true);
+    }
 }

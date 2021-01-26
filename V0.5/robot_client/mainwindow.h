@@ -148,5 +148,7 @@ private slots:
     void on_VerticalSliderRight_valueChanged(int value);
     void on_pushButtonGamePadConnect_clicked(bool checked);
     void on_pushButtonGamePadConnect_toggled(bool checked);
+    void on_radioButtonGamepad_toggled(bool checked);
+    void on_radioButtonGamepad_clicked();
 };
 #endif // MAINWINDOW_H

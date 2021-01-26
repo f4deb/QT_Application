@@ -793,7 +793,7 @@ background-color: rgb(255, 208, 215);</string>
      <string notr="true">background-color: rgb(233, 255, 233);</string>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>8</number>
     </property>
     <property name="usesScrollButtons">
      <bool>true</bool>
@@ -1454,7 +1454,7 @@ color: rgb(255, 255, 255);</string>
       <property name="geometry">
        <rect>
         <x>60</x>
-        <y>260</y>
+        <y>290</y>
         <width>75</width>
         <height>23</height>
        </rect>
@@ -1473,7 +1473,7 @@ color: rgb(255, 255, 255);</string>
       <property name="geometry">
        <rect>
         <x>270</x>
-        <y>260</y>
+        <y>290</y>
         <width>75</width>
         <height>23</height>
        </rect>
@@ -1738,7 +1738,7 @@ color: rgb(255, 255, 255);</string>
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>160</y>
+        <y>260</y>
         <width>160</width>
         <height>21</height>
        </rect>
@@ -1766,7 +1766,7 @@ color: rgb(255, 255, 255);</string>
       <property name="geometry">
        <rect>
         <x>230</x>
-        <y>160</y>
+        <y>260</y>
         <width>160</width>
         <height>21</height>
        </rect>

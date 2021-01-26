@@ -1,4 +1,5 @@
-QT       += core gui widgets network serialport printsupport gamepad
+QT       += core gui widgets network serialport printsupport gamepad \
+    quick
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -23,6 +24,7 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     menu.cpp \
+    robotTitan.cpp \
     serial.cpp \
     transmitAll.cpp
     ./Qt-custom-gauge-widget-master/source/qcgaugewidget.cpp
@@ -34,6 +36,7 @@ HEADERS += \
     gamepadRobotClient.h \
     mainwindow.h \
     menu.h \
+    robotTitan.h \
     serial.h \
     transmitAll.h
     ./Qt-custom-gauge-widget-master/source/qcgaugewidget.h

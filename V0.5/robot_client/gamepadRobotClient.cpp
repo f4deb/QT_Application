@@ -51,7 +51,7 @@ int MainWindow::gamepadInit(){
 
         if (gamepads.isEmpty()) {
             qDebug() << "Did not find any connected gamepad";
-            etat_gamepad = -1;
+            etat_gamepad = 0;
             return etat_gamepad;
         }
 
@@ -134,16 +134,12 @@ int MainWindow::gamepadInit(){
         });
 
         etat_gamepad =1;
-        qDebug() << etat_gamepad;
-
         return etat_gamepad;
     }
     else {
 
         delete  m_gamepad;
         etat_gamepad = 0;
-        qDebug() << etat_gamepad;
-
         return etat_gamepad;
     }
 }

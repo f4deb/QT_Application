@@ -652,11 +652,11 @@ public:
         lcdNumberRightTrackSlider->setProperty("intValue", QVariant(0));
         resetLeftTrackSlider = new QPushButton(tab_6);
         resetLeftTrackSlider->setObjectName(QString::fromUtf8("resetLeftTrackSlider"));
-        resetLeftTrackSlider->setGeometry(QRect(60, 260, 75, 23));
+        resetLeftTrackSlider->setGeometry(QRect(60, 290, 75, 23));
         resetLeftTrackSlider->setFont(font);
         resetRightTrackSlider = new QPushButton(tab_6);
         resetRightTrackSlider->setObjectName(QString::fromUtf8("resetRightTrackSlider"));
-        resetRightTrackSlider->setGeometry(QRect(270, 260, 75, 23));
+        resetRightTrackSlider->setGeometry(QRect(270, 290, 75, 23));
         resetRightTrackSlider->setFont(font);
         graphicsViewGamePad = new QGraphicsView(tab_6);
         graphicsViewGamePad->setObjectName(QString::fromUtf8("graphicsViewGamePad"));
@@ -725,7 +725,7 @@ public:
         radioButton_Down->setAutoExclusive(false);
         horizontalSliderLeft = new QSlider(tab_6);
         horizontalSliderLeft->setObjectName(QString::fromUtf8("horizontalSliderLeft"));
-        horizontalSliderLeft->setGeometry(QRect(20, 160, 160, 21));
+        horizontalSliderLeft->setGeometry(QRect(20, 260, 160, 21));
         horizontalSliderLeft->setMinimum(-128);
         horizontalSliderLeft->setMaximum(127);
         horizontalSliderLeft->setOrientation(Qt::Horizontal);
@@ -734,7 +734,7 @@ public:
         horizontalSliderLeft->setTickPosition(QSlider::TicksBothSides);
         horizontalSliderRight = new QSlider(tab_6);
         horizontalSliderRight->setObjectName(QString::fromUtf8("horizontalSliderRight"));
-        horizontalSliderRight->setGeometry(QRect(230, 160, 160, 21));
+        horizontalSliderRight->setGeometry(QRect(230, 260, 160, 21));
         horizontalSliderRight->setMinimum(-128);
         horizontalSliderRight->setMaximum(127);
         horizontalSliderRight->setOrientation(Qt::Horizontal);
