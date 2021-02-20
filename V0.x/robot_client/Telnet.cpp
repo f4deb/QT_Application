@@ -71,7 +71,6 @@ void MainWindow::deconnecte()
     ui->Telnet_Connect->setText("Connect");
     ui->Telnet_Connect->setEnabled(true);
     ui->radioButtonTelnet->setChecked(false);
-
 }
 
 // Ce slot est appelé lorsqu'il y a une erreur
@@ -91,5 +90,6 @@ void MainWindow::erreurSocket(QAbstractSocket::SocketError erreur)
         default:
             statusBar()->showMessage(("ERREUR : ") + socket->errorString());
     }
-    ui->Telnet_Connect->setEnabled(true);
+    ui->Telnet_Connect->setEnabled(false);
+    ui->radioButtonTelnet->setChecked(false);
 }

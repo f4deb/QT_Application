@@ -144,6 +144,11 @@ void MainWindow::on_Telnet_Connect_clicked()
     socket->connectToHost(ui->Telnet_IP->text(), ui->Telnet_Port->value()); // On se connecte au serveur demandé
 }
 
+void MainWindow::on_radioButtonTelnet_clicked()
+{
+       on_Telnet_Connect_clicked();
+}
+
 void MainWindow::on_pushButton_clicked()
 {
     ui->textEdit->clear();
@@ -483,3 +488,5 @@ void MainWindow::on_pushButton_EepromReadByte_clicked(bool checked)
 {
 
 }
+
+

@@ -175,5 +175,6 @@ private slots:
     void on_pushButton_23_clicked();
     void on_pushButton_EepromReadBloc_clicked();
     void on_pushButton_EepromReadByte_clicked(bool checked);
+    void on_radioButtonTelnet_clicked();
 };
 #endif // MAINWINDOW_H
