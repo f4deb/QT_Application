@@ -7,7 +7,7 @@
 *****************************************************************************/
 
 #include <memory>
-#include "console.h"
+#include "../../V0.x/robot_client/console.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
