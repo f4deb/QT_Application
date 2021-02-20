@@ -147,7 +147,7 @@ void MainWindow::padBouttonR2(double value){
 }
 
 void MainWindow::padBouttonVerticalLeft(double value){
-    QString text="z";
+    QString text="";
     int valueByte= -(value * 127) ;
     ui->VerticalSliderLeft->setValue(valueByte);
 
@@ -165,10 +165,17 @@ void MainWindow::padBouttonHorizontalLeft(double value){
 }
 
 void MainWindow::padBouttonVerticalRight(double value){
+    QString text = "";
     int valueByte= -(value * 127) ;
     ui->VerticalSliderRight->setValue(valueByte);
+
     robot1->setMotorRight(valueByte);
-    robot1->motorCommand();
+    if (robot1->getMotorAcknowledge()){
+        robot1->setMotorAcknowledge(false);
+        text = robot1->motorCommand();
+        robot1->motorCommand();
+        transmitAll(text);
+    }
 }
 
 void MainWindow::padBouttonHorizontalRight(double value){

@@ -57,7 +57,6 @@ int MainWindow::receiveAll(QString text){
     }
     if ( text.contains(QString (ACKNOWLEDGE) + MOTOR_WRITE)) {
         robot1->setMotorAcknowledge(true);    // Aquittement commande moteur recut
-        qDebug() << robot1->getMotorAcknowledge();
         return 0;
     }
 
