@@ -1,0 +1,12 @@
+release/robottitan.o
+release/Telnet.o
+release/console.o
+release/gamepadRobotClient.o
+release/main.o
+release/mainwindow.o
+release/menu.o
+release/serial.o
+release/transmitAll.o
+release/moc_robottitan.o
+release/moc_console.o
+release/moc_mainwindow.o
