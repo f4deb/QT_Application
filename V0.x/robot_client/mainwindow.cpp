@@ -77,12 +77,14 @@ void MainWindow::on_actionQuitter_triggered()
 
 void MainWindow::on_pushButton_Command_Terminal_1_clicked()
 {
-    transmitAll(ui->Command_Terminal_1->text());
+    robot1->SetRobotCommandToSend(ui->Command_Terminal_1->text());
+    transmitAll(robot1->getRobotCommandToSend());
 }
 
 void MainWindow::on_pushButton_Command_Terminal_2_clicked()
 {
-    transmitAll(ui->Command_Terminal_2->text());
+    robot1->SetRobotCommandToSend(ui->Command_Terminal_2->text());
+    transmitAll(robot1->getRobotCommandToSend());
 }
 
 void MainWindow::on_plainTextEdit_textChanged()
@@ -92,47 +94,56 @@ void MainWindow::on_plainTextEdit_textChanged()
 
 void MainWindow::on_pushButton_Command_Terminal_3_clicked()
 {
-    transmitAll(ui->Command_Terminal_3->text());
+    robot1->SetRobotCommandToSend(ui->Command_Terminal_3->text());
+    transmitAll(robot1->getRobotCommandToSend());
 }
 
 void MainWindow::on_pushButton_Command_Terminal_4_clicked()
 {
-    transmitAll(ui->Command_Terminal_4->text());
+    robot1->SetRobotCommandToSend(ui->Command_Terminal_4->text());
+    transmitAll(robot1->getRobotCommandToSend());
 }
 
 void MainWindow::on_pushButton_Command_Terminal_5_clicked()
 {
-   transmitAll(ui->Command_Terminal_5->text());
+    robot1->SetRobotCommandToSend(ui->Command_Terminal_5->text());
+    transmitAll(robot1->getRobotCommandToSend());
 }
 
 void MainWindow::on_pushButton_Command_Terminal_6_clicked()
 {
-    transmitAll(ui->Command_Terminal_6->text());
+    robot1->SetRobotCommandToSend(ui->Command_Terminal_6->text());
+    transmitAll(robot1->getRobotCommandToSend());
 }
 
 void MainWindow::on_pushButton_Command_Terminal_7_clicked()
 {
-    transmitAll(ui->Command_Terminal_7->text());
+    robot1->SetRobotCommandToSend(ui->Command_Terminal_7->text());
+    transmitAll(robot1->getRobotCommandToSend());
 }
 
 void MainWindow::on_pushButton_Command_Terminal_8_clicked()
 {
-    transmitAll(ui->Command_Terminal_8->text());
+    robot1->SetRobotCommandToSend(ui->Command_Terminal_8->text());
+    transmitAll(robot1->getRobotCommandToSend());
 }
 
 void MainWindow::on_pushButton_Command_Terminal_9_clicked()
 {
-    transmitAll(ui->Command_Terminal_9->text());
+    robot1->SetRobotCommandToSend(ui->Command_Terminal_9->text());
+    transmitAll(robot1->getRobotCommandToSend());
 }
 
 void MainWindow::on_pushButton_Command_Terminal_10_clicked()
 {
-   transmitAll(ui->Command_Terminal_10->text());
+    robot1->SetRobotCommandToSend(ui->Command_Terminal_10->text());
+    transmitAll(robot1->getRobotCommandToSend());
 }
 
 void MainWindow::on_pushButton_Command_Terminal_11_clicked()
 {
-   transmitAll(ui->Command_Terminal_11->text());
+    robot1->SetRobotCommandToSend(ui->Command_Terminal_11->text());
+    transmitAll(robot1->getRobotCommandToSend());
 }
 
 void MainWindow::on_Telnet_Connect_clicked()
@@ -158,14 +169,16 @@ void MainWindow::on_pushButtonReset_clicked()
 {
     QString s;
     s = robot1->reset();
-    transmitAll(s);
+    robot1->SetRobotCommandToSend(s);
+    transmitAll(robot1->getRobotCommandToSend());
 }
 
 void MainWindow::on_pushButtonStopMotor_clicked()
 {
     QString s;
     s = robot1->motorStop();
-    transmitAll(s);
+    robot1->SetRobotCommandToSend(s);
+    transmitAll(robot1->getRobotCommandToSend());
 }
 
 void MainWindow::on_pushButton_2_clicked()
@@ -354,7 +367,8 @@ void MainWindow::on_pushButton_EepromReadByte_clicked()
 {
     QString s;
     s = robot1->getEepromByte(ui->lineEdit_RobotEepromAddress->text().toInt());
-    transmitAll(s);
+    robot1->SetRobotCommandToSend(s);
+    transmitAll(robot1->getRobotCommandToSend());
 
 
 
@@ -365,7 +379,8 @@ void MainWindow::on_pushButton_EepromWriteByte_clicked()
 {
     QString s;
     s = robot1->setEepromByte(ui->lineEdit_RobotEepromAddress->text().toInt(),ui->lineEdit_EepromByteHex->text());
-    transmitAll(s);
+    robot1->SetRobotCommandToSend(s);
+    transmitAll(robot1->getRobotCommandToSend());
 }
 
 
@@ -373,7 +388,8 @@ void MainWindow::on_pushButton_EepromReadBloc_clicked()
 {
     QString s;
     s =robot1->getEepromBloc(ui->lineEdit_RobotEepromAddress->text().toInt(),ui->lineEdit_dimEeprom->text().toInt());
-    transmitAll(s);
+    robot1->SetRobotCommandToSend(s);
+    transmitAll(robot1->getRobotCommandToSend());
 }
 
 

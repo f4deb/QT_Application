@@ -57,9 +57,11 @@ int MainWindow::receiveAll(QString text){
     }
     if ( text.contains(QString (ACKNOWLEDGE) + MOTOR_WRITE)) {
         robot1->setMotorAcknowledge(true);    // Aquittement commande moteur recut
-        return 0;
+        QString value = robot1->getRobotCommandToSend().remove(ACKNOWLEDGE);
+        qDebug() << "toto";
+        if (robot1->getMotorleft() == value) {
+            return 0;
+        }
+        return -1;
     }
-
-
-
 }

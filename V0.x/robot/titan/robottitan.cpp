@@ -9,6 +9,7 @@ robotTitan::robotTitan(QObject *parent) : QObject(parent)
     motorLeftStringValue = "00";
     motorRightStringValue = "00";
     robotCommandToSend = "";
+    lastCommandIsSend = true;
     }
 
 void robotTitan::SetRobotCommandToSend(QString message){
@@ -91,6 +92,7 @@ QString robotTitan::motorStop(void){
 QString robotTitan::motorCommand(void){
    QString s;
    s = MOTOR_WRITE+ motorLeftStringValue + motorRightStringValue;
+   SetRobotCommandToSend(s);
    transmitAll(s);
    motorAcknowledge = false;
    qDebug() << getMotorAcknowledge();

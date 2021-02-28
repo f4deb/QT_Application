@@ -93,7 +93,6 @@ private:
     void radioButtonUp(bool status);
     void radioButtonDown(bool status);
 
-
 public slots:
 
     void transmitAll(QString text);
@@ -122,6 +121,8 @@ private slots:
 
 
     void readData();
+
+
 
     void on_pushButton_Command_Terminal_2_clicked();
     void on_plainTextEdit_textChanged();

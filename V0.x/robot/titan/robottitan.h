@@ -53,6 +53,7 @@ private:
     QString motorRightStringValue;
     QString robotCommandToSend;
     QString stringToConvert;
+    bool lastCommandIsSend;
 
 
     void transmitAll(QString text);

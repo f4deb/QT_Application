@@ -155,7 +155,8 @@ void MainWindow::padBouttonVerticalLeft(double value){
     if (robot1->getMotorAcknowledge()){
         robot1->setMotorAcknowledge(false);
         text = robot1->motorCommand();
-        transmitAll(text);
+        robot1->SetRobotCommandToSend(text);
+        transmitAll(robot1->getRobotCommandToSend());
     }
 }
 
@@ -173,8 +174,8 @@ void MainWindow::padBouttonVerticalRight(double value){
     if (robot1->getMotorAcknowledge()){
         robot1->setMotorAcknowledge(false);
         text = robot1->motorCommand();
-        robot1->motorCommand();
-        transmitAll(text);
+        robot1->motorCommand();        
+        transmitAll(robot1->getRobotCommandToSend());
     }
 }
 
