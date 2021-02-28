@@ -79,7 +79,7 @@ int robotTitan::getMotorleft(void){
     return value;
 }
 
-int robotTitan::getmotorRight(void){
+int robotTitan::getMotorRight(void){
     int value = motorRightStringValue.toUInt();
     return value;
 }

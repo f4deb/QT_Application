@@ -46,6 +46,24 @@ int MainWindow::receiveAll(QString text){
     robot1->receiveFromRobot(text);
 
     qDebug() << text;
+    qDebug() << "reception";
+    qDebug() << robot1->getRobotCommandToSend().remove(ACKNOWLEDGE);
+
+    if ( text.contains(QString (ACKNOWLEDGE) + MOTOR_WRITE)) {
+        robot1->setMotorAcknowledge(true);    // Aquittement commande moteur recut
+        QString value = robot1->getRobotCommandToSend().right(4);
+        bool bStatus = false;
+        qDebug() << value;
+        if (robot1->getMotorRight() == robot1->getRobotCommandToSend().right(2).toInt(&bStatus,16) ||
+            robot1->getMotorleft() == robot1->getRobotCommandToSend().mid(2,2).toInt(&bStatus,16))  {
+            qDebug() << robot1->getRobotCommandToSend().mid(2,2).toInt(&bStatus,16);
+            qDebug() << robot1->getRobotCommandToSend().right(2).toInt(&bStatus,16);
+            qDebug() << robot1->getMotorleft();
+            qDebug() << robot1->getMotorRight();
+            return -1;
+        }
+        return 0;
+    }
 
     if ( text.contains(QString (ACKNOWLEDGE) + ROBOT_EEPROM_READ_BYTE)) {
         ui->lineEdit_EepromByteHex->setText(text.remove(QString (ACKNOWLEDGE) + ROBOT_EEPROM_READ_BYTE));
@@ -55,13 +73,5 @@ int MainWindow::receiveAll(QString text){
         ui->textBrowser->setText(text.remove(QString (ACKNOWLEDGE) + ROBOT_EEPROM_READ_BLOC));
         return 0;
     }
-    if ( text.contains(QString (ACKNOWLEDGE) + MOTOR_WRITE)) {
-        robot1->setMotorAcknowledge(true);    // Aquittement commande moteur recut
-        QString value = robot1->getRobotCommandToSend().remove(ACKNOWLEDGE);
-        qDebug() << "toto";
-        if (robot1->getMotorleft() == value) {
-            return 0;
-        }
-        return -1;
-    }
+
 }

@@ -28,7 +28,7 @@ public:
     void setMotorLeft(int);
     void setMotorRight(int);
     int getMotorleft(void);
-    int getmotorRight(void);
+    int getMotorRight(void);
     QString motorStop(void);
     bool getMotorAcknowledge(void);
     void setMotorAcknowledge(bool);
