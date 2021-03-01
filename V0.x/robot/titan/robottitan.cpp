@@ -95,7 +95,6 @@ QString robotTitan::motorCommand(void){
    SetRobotCommandToSend(s);
    transmitAll(s);
    motorAcknowledge = false;
-   qDebug() << getMotorAcknowledge();
    return s;
 }
 

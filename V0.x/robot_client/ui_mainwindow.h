@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QCheckBox>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QGroupBox>
@@ -269,6 +270,7 @@ public:
     QRadioButton *radioButtonTelnet;
     QRadioButton *radioButtonGamepad;
     QRadioButton *radioButtonRobot;
+    QCheckBox *checkBox_Ack;
     QMenuBar *menubar;
     QMenu *menuFichier;
     QMenu *menu_Aide;
@@ -1425,6 +1427,10 @@ public:
         radioButtonRobot->setObjectName(QString::fromUtf8("radioButtonRobot"));
         radioButtonRobot->setGeometry(QRect(190, 20, 61, 17));
         radioButtonRobot->setAutoExclusive(false);
+        checkBox_Ack = new QCheckBox(groupBoxStatus);
+        checkBox_Ack->setObjectName(QString::fromUtf8("checkBox_Ack"));
+        checkBox_Ack->setGeometry(QRect(990, 20, 92, 25));
+        checkBox_Ack->setAutoExclusive(true);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -1460,7 +1466,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -1661,6 +1667,7 @@ public:
         radioButtonTelnet->setText(QCoreApplication::translate("MainWindow", "Telnet", nullptr));
         radioButtonGamepad->setText(QCoreApplication::translate("MainWindow", "GamePad", nullptr));
         radioButtonRobot->setText(QCoreApplication::translate("MainWindow", "Robot", nullptr));
+        checkBox_Ack->setText(QCoreApplication::translate("MainWindow", "Ack", nullptr));
         menuFichier->setTitle(QCoreApplication::translate("MainWindow", "&Fichier", nullptr));
         menu_Aide->setTitle(QCoreApplication::translate("MainWindow", "&Aide", nullptr));
         menuConfiguration->setTitle(QCoreApplication::translate("MainWindow", "Configuration", nullptr));

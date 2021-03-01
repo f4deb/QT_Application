@@ -4602,6 +4602,22 @@ background-color: rgb(255, 208, 215);</string>
       <bool>false</bool>
      </property>
     </widget>
+    <widget class="QCheckBox" name="checkBox_Ack">
+     <property name="geometry">
+      <rect>
+       <x>990</x>
+       <y>20</y>
+       <width>92</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Ack</string>
+     </property>
+     <property name="autoExclusive">
+      <bool>true</bool>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

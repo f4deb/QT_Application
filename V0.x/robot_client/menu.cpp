@@ -6,6 +6,6 @@
 
 void MainWindow::on_actionA_propos_triggered()
 {
-    QMessageBox::information(this, "A Propos", "Robot Client Mai 2020 / Last Update V0.61 "
-                                               "by F4DEB Fev 2021");
+    QMessageBox::information(this, "A Propos", "Robot Client Mai 2020 / Last Update V0.62 "
+                                               "by F4DEB March 2021");
 }

@@ -42,6 +42,8 @@ MainWindow::MainWindow(QWidget *parent)
 
     etat_gamepad = 0;
     robot1 = new robotTitan;
+
+
 }
 
 MainWindow::~MainWindow()

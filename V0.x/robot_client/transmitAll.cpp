@@ -11,7 +11,10 @@
 
 
 void MainWindow::transmitAll(QString text){
-
+    if (!ui->checkBox_Ack->isChecked()){
+         robot1->setMotorAcknowledge(true);
+    }
+    qDebug() << ui->checkBox_Ack;
     QByteArray datas = text.toUtf8();
     if (serial->isOpen()){
 
@@ -49,7 +52,7 @@ int MainWindow::receiveAll(QString text){
     qDebug() << "reception";
     qDebug() << robot1->getRobotCommandToSend().remove(ACKNOWLEDGE);
 
-    if ( text.contains(QString (ACKNOWLEDGE) + MOTOR_WRITE)) {
+    if ( text.contains(QString (ACKNOWLEDGE) + MOTOR_WRITE) ) {
         robot1->setMotorAcknowledge(true);    // Aquittement commande moteur recut
         QString value = robot1->getRobotCommandToSend().right(4);
         bool bStatus = false;
